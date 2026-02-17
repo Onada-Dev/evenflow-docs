@@ -29,9 +29,7 @@
       --yellow: #fbbf24;
       --red: #f87171;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       font-family: 'Inter', system-ui, sans-serif;
       background: var(--bg-primary);
@@ -39,357 +37,79 @@
       line-height: 1.6;
       font-weight: 300;
     }
-
-    /* Hero header */
     .hero {
       text-align: center;
       padding: 4rem 2rem 3rem;
       border-bottom: 1px solid var(--border-gold);
       background: linear-gradient(180deg, #0f1726 0%, var(--bg-primary) 100%);
     }
-
-    .hero-wordmark {
-      font-family: 'Great Vibes', cursive;
-      font-size: 4rem;
-      color: var(--gold);
-      line-height: 1;
-      margin-bottom: 0.25rem;
-    }
-
-    .hero-subtitle {
-      font-size: 0.7rem;
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      font-weight: 500;
-      margin-bottom: 1.5rem;
-    }
-
-    .hero h2 {
-      font-family: 'Playfair Display', Georgia, serif;
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: var(--text-primary);
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-meta {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-    }
-
-    .hero-meta span {
-      display: inline-block;
-      margin: 0 0.75rem;
-    }
-
-    .hero-meta strong {
-      color: var(--gold-light);
-      font-weight: 500;
-    }
-
-    /* Stats bar */
-    .stats-bar {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1.5rem 2rem;
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-value {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: var(--gold);
-      font-weight: 600;
-      line-height: 1.1;
-    }
-
-    .stat-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-muted);
-      margin-top: 0.25rem;
-    }
-
-    /* Container */
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem 4rem;
-    }
-
-    /* Sections */
-    .section {
-      margin-bottom: 3rem;
-    }
-
-    .section-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border-gold);
-      padding-bottom: 0.75rem;
-    }
-
-    .section-header h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 500;
-      color: var(--text-primary);
-    }
-
-    .section-badge {
-      font-size: 0.65rem;
-      padding: 0.2rem 0.6rem;
-      border-radius: 9999px;
-      font-weight: 500;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
+    .hero-wordmark { font-family: 'Great Vibes', cursive; font-size: 4rem; color: var(--gold); line-height: 1; margin-bottom: 0.25rem; }
+    .hero-subtitle { font-size: 0.7rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--text-muted); font-weight: 500; margin-bottom: 1.5rem; }
+    .hero h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 400; color: var(--text-primary); margin-bottom: 0.5rem; }
+    .hero-meta { color: var(--text-secondary); font-size: 0.85rem; }
+    .hero-meta span { display: inline-block; margin: 0 0.75rem; }
+    .hero-meta strong { color: var(--gold-light); font-weight: 500; }
+    .stats-bar { display: flex; justify-content: center; gap: 2rem; padding: 1.5rem 2rem; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-value { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--gold); font-weight: 600; line-height: 1.1; }
+    .stat-label { font-size: 0.7rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-top: 0.25rem; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+    .section { margin-bottom: 3rem; }
+    .section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 0.5rem; border-bottom: 1px solid var(--border-gold); padding-bottom: 0.75rem; }
+    .section-header h2 { font-family: 'Playfair Display', serif; font-size: 1.35rem; font-weight: 500; color: var(--text-primary); }
+    .section-badge { font-size: 0.65rem; padding: 0.2rem 0.6rem; border-radius: 9999px; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; }
     .badge-green { background: rgba(52, 211, 153, 0.15); color: var(--green); }
     .badge-yellow { background: rgba(251, 191, 36, 0.15); color: var(--yellow); }
     .badge-red { background: rgba(248, 113, 113, 0.15); color: var(--red); }
     .badge-gray { background: rgba(107, 114, 128, 0.15); color: var(--text-muted); }
-
-    .section-desc {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-bottom: 1.25rem;
-    }
-
-    /* Tables */
-    .table-wrap {
-      overflow-x: auto;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.8rem;
-    }
-
-    thead th {
-      background: var(--bg-table-header);
-      color: var(--gold-light);
-      font-weight: 500;
-      text-align: left;
-      padding: 0.6rem 0.75rem;
-      font-size: 0.7rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      border-bottom: 1px solid var(--border-gold);
-    }
-
-    tbody tr {
-      border-bottom: 1px solid var(--border);
-    }
-
+    .badge-blue { background: rgba(96, 165, 250, 0.15); color: #60a5fa; }
+    .section-desc { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1.25rem; }
+    .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+    thead th { background: var(--bg-table-header); color: var(--gold-light); font-weight: 500; text-align: left; padding: 0.6rem 0.75rem; font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; white-space: nowrap; border-bottom: 1px solid var(--border-gold); }
+    tbody tr { border-bottom: 1px solid var(--border); }
     tbody tr:nth-child(odd) { background: var(--bg-table-row); }
     tbody tr:nth-child(even) { background: var(--bg-table-row-alt); }
     tbody tr:hover { background: var(--bg-card-hover); }
-
-    td {
-      padding: 0.5rem 0.75rem;
-      white-space: nowrap;
-    }
-
-    td:first-child {
-      color: var(--text-primary);
-      font-weight: 400;
-      white-space: normal;
-    }
-
+    td { padding: 0.5rem 0.75rem; white-space: nowrap; }
+    td:first-child { color: var(--text-primary); font-weight: 400; white-space: normal; }
     .num { text-align: right; font-variant-numeric: tabular-nums; }
-
     .pct-high { color: var(--green); }
     .pct-mid { color: var(--yellow); }
     .pct-low { color: var(--red); }
     .pct-none { color: var(--text-muted); }
-
-    .priority-high { color: var(--gold-light); font-weight: 500; }
-    .priority-med { color: var(--text-secondary); }
-    .priority-low { color: var(--text-muted); }
-
-    .issue-cell {
-      white-space: normal;
-      max-width: 280px;
-      font-size: 0.75rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-
-    /* Legend card */
-    .legend {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .legend h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      color: var(--gold-light);
-      margin-bottom: 0.75rem;
-      font-weight: 500;
-    }
-
-    .legend-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 0.4rem 2rem;
-    }
-
-    .legend-item {
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-    }
-
-    .legend-item strong {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    /* Summary cards */
-    .summary-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .summary-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.25rem;
-    }
-
-    .summary-card h4 {
-      font-size: 0.7rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--text-muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .summary-card .value {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.75rem;
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    .summary-card .detail {
-      font-size: 0.78rem;
-      color: var(--text-secondary);
-      margin-top: 0.25rem;
-    }
-
-    /* Highlights */
-    .highlights {
-      background: var(--bg-card);
-      border: 1px solid var(--border-gold);
-      border-radius: 8px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .highlights h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--text-primary);
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .highlights ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .highlights li {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      padding: 0.4rem 0;
-      padding-left: 1.25rem;
-      position: relative;
-    }
-
-    .highlights li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.7rem;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    .highlights li strong {
-      color: var(--text-primary);
-      font-weight: 500;
-    }
-
-    /* Next steps */
-    .next-steps {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1.5rem;
-    }
-
-    .next-steps h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--text-primary);
-      margin-bottom: 1rem;
-      font-weight: 500;
-    }
-
-    .next-steps ol {
-      padding-left: 1.25rem;
-    }
-
-    .next-steps li {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      padding: 0.35rem 0;
-    }
-
-    .next-steps li strong {
-      color: var(--gold-light);
-      font-weight: 500;
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid var(--border);
-      color: var(--text-muted);
-      font-size: 0.75rem;
-    }
-
-    .footer span {
-      color: var(--gold-dim);
-    }
-
-    /* Responsive */
+    .issue-cell { white-space: normal; max-width: 280px; font-size: 0.75rem; color: var(--text-secondary); line-height: 1.4; }
+    .legend { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; margin-bottom: 2rem; }
+    .legend h3 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-light); margin-bottom: 0.75rem; font-weight: 500; }
+    .legend-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0.4rem 2rem; }
+    .legend-item { font-size: 0.78rem; color: var(--text-secondary); }
+    .legend-item strong { color: var(--text-primary); font-weight: 500; }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+    .summary-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+    .summary-card h4 { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.5rem; }
+    .summary-card .value { font-family: 'Playfair Display', serif; font-size: 1.75rem; color: var(--gold); font-weight: 600; }
+    .summary-card .detail { font-size: 0.78rem; color: var(--text-secondary); margin-top: 0.25rem; }
+    .highlights { background: var(--bg-card); border: 1px solid var(--border-gold); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; }
+    .highlights h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 1rem; font-weight: 500; }
+    .highlights ul { list-style: none; padding: 0; }
+    .highlights li { font-size: 0.85rem; color: var(--text-secondary); padding: 0.4rem 0; padding-left: 1.25rem; position: relative; }
+    .highlights li::before { content: ''; position: absolute; left: 0; top: 0.7rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+    .highlights li strong { color: var(--text-primary); font-weight: 500; }
+    .next-steps { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 1.5rem; }
+    .next-steps h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 1rem; font-weight: 500; }
+    .next-steps ol { padding-left: 1.25rem; }
+    .next-steps li { font-size: 0.85rem; color: var(--text-secondary); padding: 0.35rem 0; }
+    .next-steps li strong { color: var(--gold-light); font-weight: 500; }
+    .action-box { background: var(--bg-card); border: 2px solid var(--gold); border-radius: 8px; padding: 1.5rem; margin-bottom: 2rem; }
+    .action-box h3 { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--gold); margin-bottom: 1rem; font-weight: 500; }
+    .action-box ol { padding-left: 1.25rem; }
+    .action-box li { font-size: 0.85rem; color: var(--text-secondary); padding: 0.35rem 0; }
+    .action-box li strong { color: var(--text-primary); font-weight: 500; }
+    .cat-heading { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-light); margin: 1.5rem 0 0.75rem; font-weight: 500; }
+    .dims-note { background: var(--bg-card); border: 1px solid var(--yellow); border-radius: 8px; padding: 1rem 1.25rem; margin-top: 1.25rem; font-size: 0.82rem; color: var(--text-secondary); }
+    .dims-note strong { color: var(--yellow); font-weight: 500; }
+    .footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.75rem; }
+    .footer span { color: var(--gold-dim); }
     @media (max-width: 640px) {
       .hero-wordmark { font-size: 3rem; }
       .stats-bar { gap: 1rem; }
@@ -404,33 +124,18 @@
     <div class="hero-wordmark">Evenflow</div>
     <div class="hero-subtitle">Interiors</div>
     <h2>Vendor Scrape Report</h2>
-    <p class="hero-meta">
-      <span>February 16, 2026</span>
-    </p>
+    <p class="hero-meta"><span>February 16, 2026</span></p>
   </header>
 
   <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-value">140,512</div>
-      <div class="stat-label">Total Products</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">61</div>
-      <div class="stat-label">Active Vendors</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">78</div>
-      <div class="stat-label">Registered Vendors</div>
-    </div>
-    <div class="stat">
-      <div class="stat-value">77%</div>
-      <div class="stat-label">Strong Data Quality</div>
-    </div>
+    <div class="stat"><div class="stat-value">139,405</div><div class="stat-label">Total Products</div></div>
+    <div class="stat"><div class="stat-value">58</div><div class="stat-label">Active Vendors</div></div>
+    <div class="stat"><div class="stat-value">68</div><div class="stat-label">Registered Vendors</div></div>
+    <div class="stat"><div class="stat-value">77%</div><div class="stat-label">Strong Data Quality</div></div>
   </div>
 
   <div class="container">
 
-    <!-- Legend -->
     <div class="legend">
       <h3>How to Read This Report</h3>
       <div class="legend-grid">
@@ -446,6 +151,15 @@
       <p style="margin-top:0.75rem;font-size:0.75rem;color:var(--text-muted);">Dashes (—) mean the vendor's website doesn't publish that data, which is normal for trade-only vendors.</p>
     </div>
 
+    <!-- Action Items for Lisa -->
+    <div class="action-box">
+      <h3>Action Items for Lisa</h3>
+      <ol>
+        <li><strong>Fill in the Rank column</strong> in the "Vendor Rankings by Category" section below (1 = most important vendor in that category)</li>
+        <li><strong>Send us the website URLs</strong> for these vendors you confirmed are accessible: HVL Group, A&B Home, Chelsea House, Noir Furniture LA, Southern Home Inc., Woodbridge Furniture, Worlds Away</li>
+      </ol>
+    </div>
+
     <!-- Section 1: Strong Data -->
     <div class="section">
       <div class="section-header">
@@ -455,15 +169,12 @@
       <p class="section-desc">These vendors have rich, complete product data. Search results from these will look great.</p>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr>
-              <th>Vendor</th><th class="num">Products</th><th>Priority</th>
-              <th class="num">Desc%</th><th class="num">Img%</th><th class="num">Dims%</th>
-              <th class="num">Price%</th><th class="num">Mat%</th><th class="num">Fin%</th><th class="num">Stock%</th>
-            </tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th class="num">Products</th><th class="num">Desc%</th><th class="num">Img%</th><th class="num">Dims%</th><th class="num">Price%</th><th class="num">Mat%</th><th class="num">Fin%</th><th class="num">Stock%</th></tr></thead>
           <tbody id="strong-table"></tbody>
         </table>
+      </div>
+      <div class="dims-note">
+        <strong>Dimensions gap:</strong> Lisa reports that these vendors should have dimensions available on their sites, but we are not currently capturing them: Loloi Rugs, Eastern Accents, Jaipur Living, Jamie Young Co, Savoy House, Made Goods, Uttermost, Padma's Plantation, Eloquence, Selamat Designs, James Martin Vanities, Hekman, Cyan Design, Shadow Catchers Art. This is a scraper improvement item.
       </div>
     </div>
 
@@ -476,9 +187,7 @@
       <p class="section-desc">These vendors are in the database but have data gaps that may affect AI search accuracy.</p>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr><th>Vendor</th><th class="num">Products</th><th>Priority</th><th>Issue</th><th>Impact</th></tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th class="num">Products</th><th>Issue</th><th>Impact</th></tr></thead>
           <tbody id="improve-table"></tbody>
         </table>
       </div>
@@ -493,258 +202,279 @@
       <p class="section-desc">These vendors have products in the database, but the data is too sparse or the count too low to be useful.</p>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr><th>Vendor</th><th class="num">Products</th><th>Priority</th><th>Problem</th></tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th class="num">Products</th><th>Problem</th></tr></thead>
           <tbody id="incomplete-table"></tbody>
         </table>
       </div>
     </div>
 
-    <!-- Section 4: Blocked -->
+    <!-- Section 4: Newly Accessible -->
     <div class="section">
       <div class="section-header">
-        <h2>Not Scrapeable</h2>
-        <span class="section-badge badge-gray">Blocked / Inaccessible</span>
+        <h2>Needs Scraping — Newly Confirmed Accessible</h2>
+        <span class="section-badge badge-blue">Lisa Confirmed</span>
       </div>
-      <p class="section-desc">These vendors cannot be scraped due to security, login requirements, or site issues.</p>
+      <p class="section-desc">Lisa has confirmed these vendors are accessible. We previously marked them as blocked. <strong>Lisa — please send us the correct website URLs so we can begin scraping.</strong></p>
       <div class="table-wrap">
         <table>
-          <thead>
-            <tr><th>Vendor</th><th>Priority</th><th>Reason</th></tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th>Previous Status</th><th>Notes</th></tr></thead>
+          <tbody id="accessible-table"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Section 5: Blocked -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Not Scrapeable — Still Blocked</h2>
+        <span class="section-badge badge-gray">Blocked</span>
+      </div>
+      <p class="section-desc">These vendors still cannot be scraped with automated tools.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Vendor</th><th>Reason</th></tr></thead>
           <tbody id="blocked-table"></tbody>
         </table>
       </div>
     </div>
 
-    <!-- Progress Since Last Report -->
+    <!-- Section 6: Category Rankings -->
     <div class="section">
       <div class="section-header">
-        <h2>Progress Since Last Report</h2>
+        <h2>Vendor Rankings by Category</h2>
+      </div>
+      <p class="section-desc"><strong>Lisa — please fill in the Rank column</strong> (1 = most important) for each vendor within each category. This will help us weight search results so the most important vendors appear first. A vendor can appear in multiple categories.</p>
+      <div id="category-tables"></div>
+    </div>
+
+    <!-- Progress Since Original Report -->
+    <div class="section">
+      <div class="section-header">
+        <h2>Progress Since Original Report</h2>
         <span class="section-badge badge-green">Major Gains</span>
       </div>
-      <p class="section-desc">Comparing the current report to the previous vendor scrape report — significant progress across scraping, data quality, and new vendor coverage.</p>
+      <p class="section-desc">Comparing the current state to the original vendor scrape report.</p>
 
-      <!-- By the Numbers -->
       <div class="summary-grid" style="margin-bottom:1.5rem;">
-        <div class="summary-card" style="border-color:var(--border-gold);">
-          <h4>Fully Scraped</h4>
-          <div class="value">22 &rarr; 34</div>
-          <div class="detail">+12 vendors with strong data</div>
-        </div>
-        <div class="summary-card" style="border-color:var(--border-gold);">
-          <h4>"Not Yet Scraped"</h4>
-          <div class="value">8 &rarr; 0</div>
-          <div class="detail">All pending vendors done</div>
-        </div>
-        <div class="summary-card" style="border-color:var(--border-gold);">
-          <h4>Previously "Not Scrapeable"</h4>
-          <div class="value">0 &rarr; 3</div>
-          <div class="detail">Propac, Interlude, Signature Pillows</div>
-        </div>
-        <div class="summary-card" style="border-color:var(--border-gold);">
-          <h4>AI-Enriched Products</h4>
-          <div class="value">53,347</div>
-          <div class="detail">Via GPT-4o-mini vision pipeline</div>
-        </div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>Fully Scraped</h4><div class="value">22 &rarr; 34</div><div class="detail">+12 vendors with strong data</div></div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>"Not Yet Scraped"</h4><div class="value">8 &rarr; 0</div><div class="detail">All pending vendors done</div></div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>Vendors Deleted</h4><div class="value">10</div><div class="detail">Per Lisa's direction</div></div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>AI-Enriched Products</h4><div class="value">53,347</div><div class="detail">Via GPT-4o-mini vision pipeline</div></div>
       </div>
 
-      <!-- Vendors That Improved -->
-      <h3 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.5rem 0 0.75rem;font-weight:500;">Vendors That Improved Significantly</h3>
+      <h3 class="cat-heading">Vendors That Improved Significantly</h3>
       <div class="table-wrap" style="margin-bottom:1.5rem;">
         <table>
-          <thead>
-            <tr><th>Vendor</th><th>Previous Status</th><th class="num">Previous Products</th><th>Current Status</th><th class="num">Current Products</th></tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th>Previous Status</th><th class="num">Prev Products</th><th>Current Status</th><th class="num">Current Products</th></tr></thead>
           <tbody id="improved-table"></tbody>
         </table>
       </div>
 
-      <!-- New Vendors Added -->
-      <h3 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.5rem 0 0.75rem;font-weight:500;">New Vendors Added</h3>
+      <h3 class="cat-heading">New Vendors Added</h3>
       <div class="table-wrap" style="margin-bottom:1.5rem;">
         <table>
-          <thead>
-            <tr><th>Vendor</th><th class="num">Products</th><th>Category</th></tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th class="num">Products</th><th>Category</th></tr></thead>
           <tbody id="new-vendors-table"></tbody>
         </table>
       </div>
 
-      <!-- Data Quality Improvements -->
-      <h3 style="font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold-light);margin:1.5rem 0 0.75rem;font-weight:500;">Data Quality Improvements</h3>
+      <h3 class="cat-heading">Data Quality Improvements</h3>
       <div class="table-wrap" style="margin-bottom:1.5rem;">
         <table>
-          <thead>
-            <tr><th>Vendor</th><th>What Changed</th></tr>
-          </thead>
+          <thead><tr><th>Vendor</th><th>What Changed</th></tr></thead>
           <tbody id="quality-table"></tbody>
         </table>
       </div>
 
-      <!-- What's Still Stuck -->
       <div class="highlights" style="border-color:rgba(248,113,113,0.25);">
         <h3>What's Still Stuck</h3>
         <ul>
           <li><strong>Incomplete high-priority vendors</strong> — Lexington (26), Sherrill (18), Thibaut (4), Duralee (50), Christopher Guy (63) still have minimal data</li>
-          <li><strong>Cloudflare-blocked vendors</strong> — Fine Art HL, Global Views, Noir, Chelsea House, etc. still return 0 products</li>
-          <li><strong>Login-gated catalogs</strong> — Vanguard Furniture and HVL Group still require trade credentials</li>
+          <li><strong>Cloudflare-blocked</strong> — Global Views still returns 0 products</li>
+          <li><strong>Login-gated</strong> — Vanguard Furniture still requires trade credentials</li>
+          <li><strong>Newly accessible vendors</strong> — 7 vendors Lisa confirmed are accessible need scraping</li>
         </ul>
       </div>
     </div>
 
     <!-- Summary -->
     <div class="section">
-      <div class="section-header">
-        <h2>Summary</h2>
-      </div>
-
+      <div class="section-header"><h2>Summary</h2></div>
       <div class="summary-grid">
-        <div class="summary-card">
-          <h4>Strong Data</h4>
-          <div class="value">34</div>
-          <div class="detail">vendors / 107,682 products</div>
-        </div>
-        <div class="summary-card">
-          <h4>Needs Improvement</h4>
-          <div class="value">13</div>
-          <div class="detail">vendors / 30,239 products</div>
-        </div>
-        <div class="summary-card">
-          <h4>Incomplete</h4>
-          <div class="value">15</div>
-          <div class="detail">vendors / 843 products</div>
-        </div>
-        <div class="summary-card">
-          <h4>Blocked</h4>
-          <div class="value">16</div>
-          <div class="detail">vendors / 0 products</div>
-        </div>
+        <div class="summary-card"><h4>Strong Data</h4><div class="value">34</div><div class="detail">vendors / 106,611 products</div></div>
+        <div class="summary-card"><h4>Needs Improvement</h4><div class="value">11</div><div class="detail">vendors / 29,493 products</div></div>
+        <div class="summary-card"><h4>Incomplete</h4><div class="value">13</div><div class="detail">vendors / 769 products</div></div>
+        <div class="summary-card"><h4>Newly Accessible</h4><div class="value">7</div><div class="detail">vendors / needs scraping</div></div>
+        <div class="summary-card"><h4>Blocked</h4><div class="value">3</div><div class="detail">vendors / 0 products</div></div>
       </div>
-
       <div class="highlights">
         <h3>Key Highlights</h3>
         <ul>
-          <li><strong>77% of products</strong> (107,682) come from vendors with strong, complete data</li>
-          <li><strong>Top 5 vendors by product count:</strong> Surya (19,761), Four Hands (17,911), Wendover Art Group (10,000), Eastern Accents (9,501), Maxwell Fabrics (7,449)</li>
-          <li><strong>Vision enrichment</strong> has been run on 53,347 products using GPT-4o-mini to generate descriptions, colors, materials, and style tags from product images</li>
-          <li><strong>Cohere Rerank</strong> cross-encoder model is now used to improve search result relevance</li>
-          <li><strong>Vendor diversity</strong> is enforced in search results — max 2 products per vendor to ensure variety</li>
+          <li><strong>77% of products</strong> (106,611) come from vendors with strong, complete data</li>
+          <li><strong>Top 5 vendors:</strong> Surya (19,761), Four Hands (17,911), Wendover Art Group (10,000), Eastern Accents (9,501), Maxwell Fabrics (7,449)</li>
+          <li><strong>Vision enrichment</strong> — 53,347 products have AI-generated descriptions via GPT-4o-mini</li>
+          <li><strong>Cohere Rerank</strong> cross-encoder model improves search result relevance</li>
+          <li><strong>Vendor diversity</strong> enforced — max 2 products per vendor in results</li>
+          <li><strong>10 vendors deleted</strong> per Lisa's direction — no longer needed</li>
         </ul>
       </div>
-
       <div class="next-steps">
         <h3>Recommended Next Steps</h3>
         <ol>
-          <li><strong>Re-scrape incomplete vendors</strong> — Lexington, Sherrill, Thibaut, Duralee, and Christopher Guy are high-priority with minimal data</li>
-          <li><strong>Improve Maxwell Fabrics</strong> — 7,449 products but only listing-level data; need to scrape individual detail pages</li>
-          <li><strong>Improve Tomlinson</strong> — Same issue as Maxwell; listing data only</li>
-          <li><strong>Consider headless browser</strong> for Cloudflare-blocked vendors (Fine Art HL, Global Views, Noir, etc.)</li>
-          <li><strong>Trade account access</strong> — Vanguard and HVL Group require login credentials to scrape</li>
+          <li><strong>Scrape newly accessible vendors</strong> — HVL Group, A&B Home, Chelsea House, Noir, Southern Home, Woodbridge, Worlds Away</li>
+          <li><strong>Re-scrape incomplete vendors</strong> — Lexington, Sherrill, Thibaut, Duralee, Christopher Guy</li>
+          <li><strong>Capture dimensions</strong> — 14 vendors have dimensions we're not scraping</li>
+          <li><strong>Improve Maxwell Fabrics</strong> — needs detail-page scrape</li>
+          <li><strong>Improve Tomlinson</strong> — same issue as Maxwell</li>
+          <li><strong>Headless browser</strong> for Global Views (Cloudflare)</li>
+          <li><strong>Trade account</strong> — Vanguard requires login credentials</li>
         </ol>
       </div>
     </div>
 
   </div>
 
-  <footer class="footer">
-    <span>Evenflow Interiors</span> &mdash; Vendor Scrape Report &mdash; February 2026
-  </footer>
+  <footer class="footer"><span>Evenflow Interiors</span> &mdash; Vendor Scrape Report &mdash; February 2026</footer>
 
   <script>
-    // Data
     const strongVendors = [
-      ["Four Hands",17911,"High",100,100,100,100,100,100,88],
-      ["Jonathan Charles",429,"High",100,100,100,100,100,88,100],
-      ["Caracole",1125,"High",100,100,100,100,57,88,100],
-      ["Currey & Company",3102,"High",100,100,"—",100,100,100,"—"],
-      ["Theodore Alexander",2440,"High",100,100,"—",100,100,86,59],
-      ["ELK Home",2432,"Med",100,100,"—",100,100,71,100],
-      ["Cyan Design",2303,"Med",100,100,"—",100,100,82,100],
-      ["Renwil",1559,"Med",100,100,"—",100,99,62,100],
-      ["Uttermost",4719,"High",100,100,"—",100,86,10,100],
-      ["Old Biscayne Designs",3323,"Med",100,100,72,100,89,90,"—"],
-      ["Loloi Rugs",5089,"High",98,98,"—",100,5,"—",100],
-      ["Eastern Accents",9501,"Med",100,87,12,100,32,"—",100],
-      ["Jaipur Living",2740,"High",100,100,"—",100,"—","—",100],
-      ["Wendover Art Group",10000,"High",100,100,"—",100,72,56,100],
-      ["Shadow Catchers Art",4193,"Med",100,100,"—",100,14,12,100],
-      ["Paragon PG",4038,"Med",100,100,"—",100,"—","—",100],
-      ["Propac Images",1292,"Med",100,100,"—",100,"—","—",100],
-      ["Made Goods",1484,"High",100,100,"—",100,"—","—",100],
-      ["Savoy House",2099,"Med",100,100,"—",100,"—","—",100],
-      ["Jamie Young Co",870,"Med",100,100,"—",100,"—","—",100],
-      ["Maitland-Smith",768,"High",100,99,100,100,6,5,90],
-      ["Ambella Home",708,"Med",100,100,100,100,"—","—",100],
-      ["Artistica Home",612,"Med",100,100,100,100,22,20,72],
-      ["Universal Furniture",1097,"High",100,100,99,100,"—","—","—"],
-      ["Summer Classics",1027,"High",98,96,"—",100,84,20,100],
-      ["Interlude Home",1076,"Med",77,100,"—",100,"—","—",100],
-      ["Eloquence",398,"Med",100,100,"—",100,"—","—",100],
-      ["Padma's Plantation",213,"Med",100,100,"—",100,"—","—",100],
-      ["Selamat Designs",235,"Med",98,98,"—",100,"—","—",100],
-      ["James Martin Vanities",498,"Med",100,100,"—",100,6,6,100],
-      ["Hekman",419,"Low",100,100,"—",100,"—","—",100],
-      ["Greenhouse Fabrics",89,"Med",100,100,"—","—",100,"—","—"],
-      ["Sarreid Ltd",585,"Med",100,100,"—",100,"—","—",100],
-      ["Swaim Inc.",1317,"Med",100,91,"—",100,6,"—",100],
+      ["Four Hands",17911,100,100,100,100,100,100,88],
+      ["Jonathan Charles",429,100,100,100,100,100,88,100],
+      ["Caracole",1125,100,100,100,100,57,88,100],
+      ["Currey & Company",3102,100,100,"—",100,100,100,"—"],
+      ["Theodore Alexander",2440,100,100,"—",100,100,86,59],
+      ["ELK Home",2432,100,100,"—",100,100,71,100],
+      ["Cyan Design",2303,100,100,"—",100,100,82,100],
+      ["Renwil",1559,100,100,"—",100,99,62,100],
+      ["Uttermost",4719,100,100,"—",100,86,10,100],
+      ["Old Biscayne Designs",3323,100,100,72,100,89,90,"—"],
+      ["Loloi Rugs",5089,98,98,"—",100,5,"—",100],
+      ["Eastern Accents",9501,100,87,12,100,32,"—",100],
+      ["Jaipur Living",2740,100,100,"—",100,"—","—",100],
+      ["Wendover Art Group",10000,100,100,"—",100,72,56,100],
+      ["Shadow Catchers Art",4193,100,100,"—",100,14,12,100],
+      ["Paragon PG",4038,100,100,"—",100,"—","—",100],
+      ["Propac Images",1292,100,100,"—",100,"—","—",100],
+      ["Made Goods",1484,100,100,"—",100,"—","—",100],
+      ["Savoy House",2099,100,100,"—",100,"—","—",100],
+      ["Jamie Young Co",870,100,100,"—",100,"—","—",100],
+      ["Maitland-Smith",768,100,99,100,100,6,5,90],
+      ["Ambella Home",708,100,100,100,100,"—","—",100],
+      ["Artistica Home",612,100,100,100,100,22,20,72],
+      ["Universal Furniture",1097,100,100,99,100,"—","—","—"],
+      ["Summer Classics",1027,98,96,"—",100,84,20,100],
+      ["Interlude Home",1076,77,100,"—",100,"—","—",100],
+      ["Eloquence",398,100,100,"—",100,"—","—",100],
+      ["Padma's Plantation",213,100,100,"—",100,"—","—",100],
+      ["Selamat Designs",235,98,98,"—",100,"—","—",100],
+      ["James Martin Vanities",498,100,100,"—",100,6,6,100],
+      ["Hekman",419,100,100,"—",100,"—","—",100],
+      ["Greenhouse Fabrics",89,100,100,"—","—",100,"—","—"],
+      ["Sarreid Ltd",585,100,100,"—",100,"—","—",100],
+      ["Swaim Inc.",1317,100,91,"—",100,6,"—",100],
     ];
-
     const improveVendors = [
-      ["Surya",19761,"High","Product names are inventory codes (e.g. \"AAM-008\"). Vision enrichment has added descriptions.","Largest vendor by count. AI uses enriched descriptions for search."],
-      ["Bernhardt",5871,"High","14% missing descriptions. 14% missing photos.","One of the biggest furniture vendors — data is thinner than ideal."],
-      ["Fairfield Chair",6515,"Med","No dimensions. Material/finish data only ~50%.","Basic search works but product detail could be richer."],
-      ["Regina Andrew",2175,"High","34% missing descriptions and photos.","Lighting vendor — some products won't have images in results."],
-      ["Gabriella White",2550,"High","No material or finish data.","AI matches by name/description only."],
-      ["Maxwell Fabrics",7449,"Med","Only 6% have descriptions or images.","Large catalog but very thin data. Needs re-scrape."],
-      ["Rowe Furniture",1840,"Med","26% missing photos. No material/finish data.","Some products won't display images."],
-      ["Tomlinson Companies",1770,"Med","Only 16% have descriptions or images.","Needs detail-page scrape."],
-      ["Wesley Hall",396,"Med","Only 34% have descriptions. No stock info.","AI relies on name matching for most products."],
-      ["Essentials for Living",561,"Med","Zero product photos.","Products won't display images."],
-      ["Precedent Furniture",299,"Med","Zero product photos. No material data.","Searchable by name only, no images."],
-      ["Castelle Furniture",675,"Med","No descriptions available from site.","AI matches by product name only."],
-      ["Tuuci",135,"Low","Only 22% have photos. No pricing.","Limited display quality."],
+      ["Surya",19761,"Product names are inventory codes. Vision enrichment has added descriptions.","Largest vendor. AI uses enriched descriptions."],
+      ["Bernhardt",5871,"14% missing descriptions. 14% missing photos.","Data thinner than ideal."],
+      ["Fairfield Chair",6515,"No dimensions. Material/finish ~50%.","Basic search works but lacks detail."],
+      ["Regina Andrew",2175,"34% missing descriptions and photos.","Some products lack images."],
+      ["Gabriella White",2550,"No material or finish data.","AI matches by name/description only."],
+      ["Maxwell Fabrics",7449,"Only 6% have descriptions or images.","Needs detail-page re-scrape."],
+      ["Rowe Furniture",1840,"26% missing photos. No material/finish.","Some products lack images."],
+      ["Tomlinson Companies",1770,"Only 16% have descriptions or images.","Needs detail-page scrape."],
+      ["Essentials for Living",561,"Zero product photos.","No images in results."],
+      ["Precedent Furniture",299,"Zero product photos. No material data.","Name-only search, no images."],
+      ["Tuuci",135,"Only 22% have photos. No pricing.","Limited display quality."],
     ];
-
     const incompleteVendors = [
-      ["Artesia Collections",480,"Med","Broken — virtually no usable data (0% descriptions, images, or pricing)"],
-      ["Lexington Home Brands",26,"High","Major vendor with thousands of products — only captured 26"],
-      ["Sherrill Furniture",18,"High","Major upholstery vendor — only 18 products captured"],
-      ["McKinley Leather",10,"Med","Only 10 products captured"],
-      ["Style Upholstering",11,"Med","Only 11 products captured"],
-      ["Thibaut Design",4,"High","Major fabric/wallcovering vendor — only 4 products"],
-      ["Duralee / Robert Allen",50,"High","Large fabric house — only 50 captured"],
-      ["Christopher Guy",63,"High","Luxury vendor — likely has hundreds more"],
-      ["Gracie Studio",50,"Med","Likely has more — needs full catalog scrape"],
-      ["Peyton Webster",57,"Med","Small catalog — may be complete, needs verification"],
-      ["LAFVB",16,"Med","Marketing site only — no product catalog"],
-      ["Signature Pillows",20,"Low","Only best sellers captured"],
-      ["Rowley Company",15,"Low","Workroom supplies — likely has more"],
-      ["Phillips Scott",1,"Med","Only 1 product captured"],
-      ["Horizon Shades",3,"Med","Only 3 products captured"],
+      ["Artesia Collections",480,"Broken — no usable data"],
+      ["Lexington Home Brands",26,"Major vendor — only 26 captured"],
+      ["Sherrill Furniture",18,"Only category pages captured, not products"],
+      ["McKinley Leather",10,"Only 10 products"],
+      ["Style Upholstering",11,"Only 11 products"],
+      ["Thibaut Design",4,"Major fabric vendor — only 4 products"],
+      ["Duralee / Robert Allen",50,"Large fabric house — only 50 captured"],
+      ["Christopher Guy",63,"Luxury vendor — likely hundreds more"],
+      ["Gracie Studio",50,"Needs full catalog scrape"],
+      ["Peyton Webster",57,"Needs verification"],
+      ["Rowley Company",15,"Workroom supplies — low priority"],
+      ["Phillips Scott",1,"Only 1 product"],
+      ["Horizon Shades",3,"Only 3 products"],
     ];
-
+    const accessibleVendors = [
+      ["HVL Group (Hudson Valley)","Was marked login-gated","Lisa confirms totally accessible"],
+      ["A&B Home","Was marked password-protected","Lisa confirms website is fine"],
+      ["Chelsea House","Was marked Cloudflare blocked","Lisa confirms fine"],
+      ["Noir Furniture LA","Was marked Cloudflare blocked","Lisa confirms fine"],
+      ["Southern Home Inc.","Was marked Cloudflare blocked","Lisa confirms fine"],
+      ["Woodbridge Furniture","Was marked DNS error","Lisa confirms fine"],
+      ["Worlds Away","Was marked Cloudflare blocked","Lisa confirms fine"],
+    ];
     const blockedVendors = [
-      ["Vanguard Furniture","High","Requires trade account login to access catalog"],
-      ["HVL Group (Hudson Valley)","High","Product data not publicly accessible"],
-      ["Fine Art Handcrafted Lighting","High","Cloudflare security blocks automated access"],
-      ["Global Views","High","Cloudflare security blocks automated access"],
-      ["Leftbank Art","Med","Requires trade account login"],
-      ["Bramble Co","Med","Complex website — needs specialized scraper"],
-      ["Noir Furniture LA","Med","Cloudflare security blocks automated access"],
-      ["Chelsea House","Med","Cloudflare security blocks automated access"],
-      ["Southern Home Inc.","Med","Cloudflare security blocks automated access"],
-      ["Worlds Away","Med","Cloudflare/WAF blocks automated access"],
-      ["Stout Textiles","Med","SSL certificate error — site may be down"],
-      ["Woodbridge Furniture","Med","Domain DNS error — site appears to be down"],
-      ["A&B Home","Med","Password-protected WooCommerce site"],
-      ["Newport Cottages","Low","Password-protected Shopify site"],
-      ["AFK Furniture","Low","Cloudflare blocks access"],
-      ["LIW Furniture","Low","Site appears to be down"],
+      ["Vanguard Furniture","Requires trade account login"],
+      ["Global Views","Cloudflare security blocks access"],
+      ["Bramble Co","Complex website — needs specialized scraper"],
     ];
-
-    // Progress data
+    const categoryData = {
+      "Furniture": [
+        ["Four Hands",17911],["Bernhardt",5871],["Uttermost",4719],["Old Biscayne Designs",3323],
+        ["Gabriella White",2550],["Theodore Alexander",2440],["ELK Home",2432],
+        ["Tomlinson Companies",1770],["Made Goods",1484],["Swaim Inc.",1317],
+        ["Caracole",1125],["Universal Furniture",1097],["Interlude Home",1076],
+        ["Maitland-Smith",768],["Ambella Home",708],["Artistica Home",612],
+        ["Sarreid Ltd",585],["Essentials for Living",561],["Artesia Collections",480],
+        ["Jonathan Charles",429],["Eloquence",398],["Selamat Designs",235],
+        ["Padma's Plantation",213],["Christopher Guy",63],["Lexington Home Brands",26],
+        ["Phillips Scott",1],["Vanguard Furniture",0],["A&B Home",0],
+        ["Bramble Co",0],["Noir Furniture LA",0],["Southern Home Inc.",0],
+        ["Woodbridge Furniture",0],["Worlds Away",0]
+      ],
+      "Upholstery / Seating": [
+        ["Fairfield Chair",6515],["Bernhardt",5871],["Gabriella White",2550],
+        ["Theodore Alexander",2440],["Rowe Furniture",1840],["Swaim Inc.",1317],
+        ["Caracole",1125],["Precedent Furniture",299],["Christopher Guy",63],
+        ["Sherrill Furniture",18],["Style Upholstering",11],["McKinley Leather",10],
+        ["Vanguard Furniture",0]
+      ],
+      "Lighting": [
+        ["Uttermost",4719],["Currey & Company",3102],["ELK Home",2432],
+        ["Cyan Design",2303],["Regina Andrew",2175],["Savoy House",2099],
+        ["Renwil",1559],["Made Goods",1484],["Jamie Young Co",870],
+        ["Chelsea House",0],["HVL Group (Hudson Valley)",0],["Worlds Away",0]
+      ],
+      "Rugs": [
+        ["Surya",19761],["Loloi Rugs",5089],["Jaipur Living",2740],["Peyton Webster",57]
+      ],
+      "Art / Wall Decor": [
+        ["Wendover Art Group",10000],["Uttermost",4719],["Shadow Catchers Art",4193],
+        ["Paragon PG",4038],["Renwil",1559],["Propac Images",1292],["Christopher Guy",63]
+      ],
+      "Decor / Accessories": [
+        ["Surya",19761],["Uttermost",4719],["Currey & Company",3102],
+        ["Cyan Design",2303],["Renwil",1559],["Made Goods",1484],
+        ["Interlude Home",1076],["Jamie Young Co",870],["Sarreid Ltd",585],
+        ["A&B Home",0],["Chelsea House",0],["Global Views",0]
+      ],
+      "Fabrics / Textiles": [
+        ["Eastern Accents",9501],["Maxwell Fabrics",7449],["Greenhouse Fabrics",89],
+        ["Duralee / Robert Allen",50],["Thibaut Design",4]
+      ],
+      "Outdoor": [
+        ["Gabriella White",2550],["Summer Classics",1027],["Tuuci",135],["Lexington Home Brands",26]
+      ],
+      "Bedding / Pillows": [
+        ["Surya",19761],["Eastern Accents",9501]
+      ],
+      "Wallcoverings": [
+        ["Gracie Studio",50],["Thibaut Design",4]
+      ],
+      "Bathroom": [
+        ["Ambella Home",708],["James Martin Vanities",498]
+      ],
+      "Window Treatments": [
+        ["Horizon Shades",3]
+      ]
+    };
     const improvedVendors = [
       ["Theodore Alexander","Incomplete",7,"Fully Scraped",2440],
       ["Ambella Home","Not Yet Scraped",0,"Fully Scraped",708],
@@ -757,10 +487,7 @@
       ["Precedent Furniture","Not Yet Scraped",0,"Scraped",299],
       ["Peyton Webster","Not Yet Scraped",0,"Scraped",57],
       ["Gracie Studio","Not Yet Scraped",0,"Incomplete",50],
-      ["Signature Pillows","Not Scrapeable",0,"Incomplete",20],
-      ["LAFVB","Not Scrapeable",0,"Incomplete",16],
     ];
-
     const newVendors = [
       ["ELK Home",2432,"Lighting, furniture, decor"],
       ["Renwil",1559,"Decor, mirrors, lighting"],
@@ -771,13 +498,12 @@
       ["Rowley Company",15,"Workroom supplies"],
       ["Horizon Shades",3,"Window treatments"],
     ];
-
     const qualityImprovements = [
-      ["Surya (19,761 products)","Previously \"no descriptions\" — now 100% have AI-generated descriptions via vision enrichment"],
-      ["Wendover Art Group (10,000)","Previously \"no descriptions\" — now 100% have descriptions"],
+      ["Surya (19,761 products)","Previously no descriptions — now 100% have AI-generated descriptions via vision enrichment"],
+      ["Wendover Art Group (10,000)","Previously no descriptions — now 100% have descriptions"],
       ["Cyan Design (2,303)","Description coverage: 79% &rarr; 100%. Image coverage: 83% &rarr; 100%"],
       ["Four Hands (17,911)","Description coverage: 97% &rarr; 100%"],
-      ["Gabriella White (2,550)","Previously \"85% missing descriptions\" — now 98% have descriptions"],
+      ["Gabriella White (2,550)","Previously 85% missing descriptions — now 98% have descriptions"],
     ];
 
     function pctClass(v) {
@@ -786,84 +512,42 @@
       if (v >= 50) return "pct-mid";
       return "pct-low";
     }
+    function fmtNum(n) { return typeof n === "number" ? n.toLocaleString() : n; }
 
-    function prioClass(v) {
-      if (v === "High") return "priority-high";
-      if (v === "Med") return "priority-med";
-      return "priority-low";
+    // Strong vendors
+    document.getElementById("strong-table").innerHTML = strongVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td>${[2,3,4,5,6,7,8].map(i => `<td class="num ${pctClass(r[i])}">${r[i]==="—"?"—":r[i]}</td>`).join("")}</tr>`).join("");
+
+    // Improve vendors
+    document.getElementById("improve-table").innerHTML = improveVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td><td class="issue-cell">${r[3]}</td></tr>`).join("");
+
+    // Incomplete
+    document.getElementById("incomplete-table").innerHTML = incompleteVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td></tr>`).join("");
+
+    // Accessible
+    document.getElementById("accessible-table").innerHTML = accessibleVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td><td class="issue-cell" style="color:var(--green)">${r[2]}</td></tr>`).join("");
+
+    // Blocked
+    document.getElementById("blocked-table").innerHTML = blockedVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td></tr>`).join("");
+
+    // Category ranking tables
+    const catContainer = document.getElementById("category-tables");
+    for (const [cat, vendors] of Object.entries(categoryData)) {
+      let html = `<h3 class="cat-heading">${cat}</h3><div class="table-wrap" style="margin-bottom:1.5rem;"><table><thead><tr><th style="width:60px">Rank</th><th>Vendor</th><th class="num">Products</th></tr></thead><tbody>`;
+      for (const [name, count] of vendors) {
+        html += `<tr><td style="color:var(--gold-light)">___</td><td>${name}</td><td class="num">${fmtNum(count)}</td></tr>`;
+      }
+      html += `</tbody></table></div>`;
+      catContainer.innerHTML += html;
     }
 
-    function fmtNum(n) {
-      return typeof n === "number" ? n.toLocaleString() : n;
-    }
+    // Improved vendors
+    document.getElementById("improved-table").innerHTML = improvedVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td><td class="num pct-low">${fmtNum(r[2])}</td><td class="issue-cell" style="color:var(--green)">${r[3]}</td><td class="num pct-high">${fmtNum(r[4])}</td></tr>`).join("");
 
-    // Render strong vendors
-    document.getElementById("strong-table").innerHTML = strongVendors.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="num">${fmtNum(r[1])}</td>
-        <td class="${prioClass(r[2])}">${r[2]}</td>
-        ${[3,4,5,6,7,8,9].map(i => `<td class="num ${pctClass(r[i])}">${r[i] === "—" ? "—" : r[i]}</td>`).join("")}
-      </tr>
-    `).join("");
+    // New vendors
+    document.getElementById("new-vendors-table").innerHTML = newVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td></tr>`).join("");
 
-    // Render improve vendors
-    document.getElementById("improve-table").innerHTML = improveVendors.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="num">${fmtNum(r[1])}</td>
-        <td class="${prioClass(r[2])}">${r[2]}</td>
-        <td class="issue-cell">${r[3]}</td>
-        <td class="issue-cell">${r[4]}</td>
-      </tr>
-    `).join("");
-
-    // Render incomplete
-    document.getElementById("incomplete-table").innerHTML = incompleteVendors.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="num">${fmtNum(r[1])}</td>
-        <td class="${prioClass(r[2])}">${r[2]}</td>
-        <td class="issue-cell">${r[3]}</td>
-      </tr>
-    `).join("");
-
-    // Render blocked
-    document.getElementById("blocked-table").innerHTML = blockedVendors.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="${prioClass(r[1])}">${r[1]}</td>
-        <td class="issue-cell">${r[2]}</td>
-      </tr>
-    `).join("");
-
-    // Render improved vendors
-    document.getElementById("improved-table").innerHTML = improvedVendors.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="issue-cell">${r[1]}</td>
-        <td class="num pct-low">${fmtNum(r[2])}</td>
-        <td class="issue-cell" style="color:var(--green)">${r[3]}</td>
-        <td class="num pct-high">${fmtNum(r[4])}</td>
-      </tr>
-    `).join("");
-
-    // Render new vendors
-    document.getElementById("new-vendors-table").innerHTML = newVendors.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="num">${fmtNum(r[1])}</td>
-        <td class="issue-cell">${r[2]}</td>
-      </tr>
-    `).join("");
-
-    // Render quality improvements
-    document.getElementById("quality-table").innerHTML = qualityImprovements.map(r => `
-      <tr>
-        <td>${r[0]}</td>
-        <td class="issue-cell">${r[1]}</td>
-      </tr>
-    `).join("");
+    // Quality improvements
+    document.getElementById("quality-table").innerHTML = qualityImprovements.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td></tr>`).join("");
   </script>
 
 </body>
