@@ -139,6 +139,69 @@ These vendors cannot be scraped with automated tools due to security, login requ
 
 ---
 
+## Progress Since Last Report
+
+Since the previous vendor scrape report, significant progress has been made across scraping, data quality, and new vendor coverage.
+
+### Vendors That Improved Significantly
+
+| Vendor | Previous Status | Previous Products | Current Status | Current Products |
+|--------|----------------|-------------------|---------------|-----------------|
+| Theodore Alexander | Incomplete | 7 | Fully Scraped | **2,440** |
+| Ambella Home | Not Yet Scraped | 0 | Fully Scraped | **708** |
+| Paragon PG | Not Yet Scraped | 0 | Fully Scraped | **4,038** |
+| Sarreid Ltd | Not Yet Scraped | 0 | Fully Scraped | **585** |
+| Propac Images | Not Scrapeable | 0 | Fully Scraped | **1,292** |
+| Interlude Home | Not Scrapeable | 0 | Scraped | **1,076** |
+| Tomlinson Companies | Not Yet Scraped | 0 | Scraped (thin) | **1,770** |
+| Maxwell Fabrics | Not Yet Scraped | 0 | Scraped (thin) | **7,449** |
+| Precedent Furniture | Not Yet Scraped | 0 | Scraped | **299** |
+| Peyton Webster | Not Yet Scraped | 0 | Scraped | **57** |
+| Gracie Studio | Not Yet Scraped | 0 | Incomplete | **50** |
+| Signature Pillows | Not Scrapeable | 0 | Incomplete | **20** |
+| LAFVB | Not Scrapeable | 0 | Incomplete | **16** |
+
+### New Vendors Added (not in previous report)
+
+| Vendor | Products | Category |
+|--------|----------|----------|
+| ELK Home | 2,432 | Lighting, furniture, decor |
+| Renwil | 1,559 | Decor, mirrors, lighting |
+| Swaim Inc. | 1,317 | Upholstery, custom furniture |
+| Summer Classics | 1,027 | Outdoor furniture |
+| Tuuci | 135 | Outdoor umbrellas, shade |
+| Greenhouse Fabrics | 89 | Fabrics, textiles |
+| Rowley Company | 15 | Workroom supplies |
+| Horizon Shades | 3 | Window treatments |
+
+### Data Quality Improvements
+
+| Vendor | What Changed |
+|--------|-------------|
+| Surya (19,761 products) | Previously "no descriptions" — now 100% have AI-generated descriptions via vision enrichment |
+| Wendover Art Group (10,000) | Previously "no descriptions" — now 100% have descriptions |
+| Cyan Design (2,303) | Description coverage: 79% → 100%. Image coverage: 83% → 100% |
+| Four Hands (17,911) | Description coverage: 97% → 100% |
+| Gabriella White (2,550) | Previously "85% missing descriptions" — now 98% have descriptions |
+
+### By the Numbers
+
+| Metric | Previous Report | Current Report | Change |
+|--------|----------------|----------------|--------|
+| Fully scraped vendors | 22 | 34 | **+12** |
+| "Not yet scraped" vendors | 8 | 0 | **All done** |
+| "Not scrapeable" vendors that were scraped | 0 | 3 | Propac, Interlude, Signature Pillows |
+| New vendors added | — | 8 | ELK Home, Renwil, Swaim, Summer Classics, etc. |
+| Products with AI-enriched descriptions | 0 | 53,347 | Via GPT-4o-mini vision pipeline |
+
+### What's Still Stuck
+
+- **Incomplete high-priority vendors** — Lexington (26), Sherrill (18), Thibaut (4), Duralee (50), Christopher Guy (63) still have minimal data
+- **Cloudflare-blocked vendors** — Fine Art HL, Global Views, Noir, Chelsea House, etc. still return 0 products
+- **Login-gated catalogs** — Vanguard Furniture and HVL Group still require trade credentials
+
+---
+
 ## Summary
 
 | Status | Vendors | Products |
