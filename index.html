@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evenflow Interiors — Vendor Scrape Report</title>
+  <title>Evenflow Interiors — Project Documentation</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
@@ -108,6 +108,16 @@
     .cat-heading { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--gold-light); margin: 1.5rem 0 0.75rem; font-weight: 500; }
     .dims-note { background: var(--bg-card); border: 1px solid var(--yellow); border-radius: 8px; padding: 1rem 1.25rem; margin-top: 1.25rem; font-size: 0.82rem; color: var(--text-secondary); }
     .dims-note strong { color: var(--yellow); font-weight: 500; }
+    .docs-nav { background: linear-gradient(135deg, var(--bg-card) 0%, #0f1726 100%); border: 1px solid var(--border-gold); border-radius: 12px; padding: 2rem; margin-bottom: 2.5rem; }
+    .docs-nav h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500; }
+    .docs-nav .docs-subtitle { font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.5; }
+    .docs-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.25rem; }
+    .doc-card { background: var(--bg-table-row); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem 1.5rem; text-decoration: none; color: inherit; transition: all 0.2s ease; display: block; }
+    .doc-card:hover { border-color: var(--gold); background: var(--bg-card-hover); transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .doc-card-label { font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.4rem; }
+    .doc-card-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; color: var(--text-primary); font-weight: 500; margin-bottom: 0.5rem; }
+    .doc-card-desc { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; }
+    .doc-card-arrow { font-size: 0.78rem; color: var(--gold-light); margin-top: 0.75rem; font-weight: 500; }
     .footer { text-align: center; padding: 2rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.75rem; }
     .footer span { color: var(--gold-dim); }
     @media (max-width: 640px) {
@@ -123,7 +133,7 @@
   <header class="hero">
     <div class="hero-wordmark">Evenflow</div>
     <div class="hero-subtitle">Interiors</div>
-    <h2>Vendor Scrape Report</h2>
+    <h2>Product Search — Project Documentation</h2>
     <p class="hero-meta"><span>February 16, 2026</span></p>
   </header>
 
@@ -149,6 +159,26 @@
         <div class="legend-item"><strong>Stock%</strong> — Products with availability info</div>
       </div>
       <p style="margin-top:0.75rem;font-size:0.75rem;color:var(--text-muted);">Dashes (—) mean the vendor's website doesn't publish that data, which is normal for trade-only vendors.</p>
+    </div>
+
+    <!-- Project Documentation -->
+    <div class="docs-nav">
+      <h3>Project Documentation</h3>
+      <p class="docs-subtitle">Core product documentation for the Evenflow Product Search chatbot — an AI-powered vertical search engine that consolidates 60+ trade vendor catalogs into a single conversational interface for interior designers.</p>
+      <div class="docs-grid">
+        <a href="PRD.md" class="doc-card">
+          <div class="doc-card-label">Product Requirements</div>
+          <div class="doc-card-title">Product Requirements Document</div>
+          <div class="doc-card-desc">Complete system specification — architecture, search pipeline, data models, API endpoints, frontend design, scraper pipeline, deployment, and roadmap. Covers all technical and business requirements for the product.</div>
+          <div class="doc-card-arrow">View PRD &rarr;</div>
+        </a>
+        <a href="UserStories.md" class="doc-card">
+          <div class="doc-card-label">User Stories</div>
+          <div class="doc-card-title">User Stories &amp; Acceptance Criteria</div>
+          <div class="doc-card-desc">35 user stories across 10 epics — product search, conversational experience, product display, chat interface, data pipeline, vendor management, authentication, collections, analytics, and reliability. Each with acceptance criteria and implementation status.</div>
+          <div class="doc-card-arrow">View User Stories &rarr;</div>
+        </a>
+      </div>
     </div>
 
     <!-- Action Items for Lisa -->
