@@ -134,14 +134,14 @@
     <div class="hero-wordmark">Evenflow</div>
     <div class="hero-subtitle">Interiors</div>
     <h2>Product Search — Project Documentation</h2>
-    <p class="hero-meta"><span>February 16, 2026</span></p>
+    <p class="hero-meta"><span>February 20, 2026</span></p>
   </header>
 
   <div class="stats-bar">
-    <div class="stat"><div class="stat-value">139,405</div><div class="stat-label">Total Products</div></div>
-    <div class="stat"><div class="stat-value">58</div><div class="stat-label">Active Vendors</div></div>
+    <div class="stat"><div class="stat-value">154,804</div><div class="stat-label">Total Products</div></div>
+    <div class="stat"><div class="stat-value">65</div><div class="stat-label">Active Vendors</div></div>
     <div class="stat"><div class="stat-value">68</div><div class="stat-label">Registered Vendors</div></div>
-    <div class="stat"><div class="stat-value">77%</div><div class="stat-label">Strong Data Quality</div></div>
+    <div class="stat"><div class="stat-value">69%</div><div class="stat-label">Strong Data Quality</div></div>
   </div>
 
   <div class="container">
@@ -158,7 +158,7 @@
         <div class="legend-item"><strong>Fin%</strong> — Products listing their finish</div>
         <div class="legend-item"><strong>Stock%</strong> — Products with availability info</div>
       </div>
-      <p style="margin-top:0.75rem;font-size:0.75rem;color:var(--text-muted);">Dashes (—) mean the vendor's website doesn't publish that data, which is normal for trade-only vendors.</p>
+      <p style="margin-top:0.75rem;font-size:0.75rem;color:var(--text-muted);">Dashes (&mdash;) mean the vendor's website doesn't publish that data, which is normal for trade-only vendors.</p>
     </div>
 
     <!-- Project Documentation -->
@@ -186,7 +186,8 @@
       <h3>Action Items for Lisa</h3>
       <ol>
         <li><strong>Fill in the Rank column</strong> in the "Vendor Rankings by Category" section below (1 = most important vendor in that category)</li>
-        <li><strong>Send us the website URLs</strong> for these vendors you confirmed are accessible: HVL Group, A&B Home, Chelsea House, Noir Furniture LA, Southern Home Inc., Woodbridge Furniture, Worlds Away</li>
+        <li><strong>Confirm Noir Furniture LA</strong> — Is the login requirement new, or is there a public-facing catalog URL we should use?</li>
+        <li><strong>Vanguard Furniture</strong> — Can you provide trade login credentials so we can scrape their catalog?</li>
       </ol>
     </div>
 
@@ -238,22 +239,7 @@
       </div>
     </div>
 
-    <!-- Section 4: Newly Accessible -->
-    <div class="section">
-      <div class="section-header">
-        <h2>Needs Scraping — Newly Confirmed Accessible</h2>
-        <span class="section-badge badge-blue">Lisa Confirmed</span>
-      </div>
-      <p class="section-desc">Lisa has confirmed these vendors are accessible. We previously marked them as blocked. <strong>Lisa — please send us the correct website URLs so we can begin scraping.</strong></p>
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Vendor</th><th>Previous Status</th><th>Notes</th></tr></thead>
-          <tbody id="accessible-table"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- Section 5: Blocked -->
+    <!-- Section 4: Blocked -->
     <div class="section">
       <div class="section-header">
         <h2>Not Scrapeable — Still Blocked</h2>
@@ -268,7 +254,7 @@
       </div>
     </div>
 
-    <!-- Section 6: Category Rankings -->
+    <!-- Section 5: Category Rankings -->
     <div class="section">
       <div class="section-header">
         <h2>Vendor Rankings by Category</h2>
@@ -277,52 +263,45 @@
       <div id="category-tables"></div>
     </div>
 
-    <!-- Progress Since Original Report -->
+    <!-- Progress Since Last Report -->
     <div class="section">
       <div class="section-header">
-        <h2>Progress Since Original Report</h2>
+        <h2>Progress Since Last Report (Feb 16)</h2>
         <span class="section-badge badge-green">Major Gains</span>
       </div>
-      <p class="section-desc">Comparing the current state to the original vendor scrape report.</p>
+      <p class="section-desc">Comparing the current state to the Feb 16 vendor scrape report.</p>
 
       <div class="summary-grid" style="margin-bottom:1.5rem;">
-        <div class="summary-card" style="border-color:var(--border-gold);"><h4>Fully Scraped</h4><div class="value">22 &rarr; 34</div><div class="detail">+12 vendors with strong data</div></div>
-        <div class="summary-card" style="border-color:var(--border-gold);"><h4>"Not Yet Scraped"</h4><div class="value">8 &rarr; 0</div><div class="detail">All pending vendors done</div></div>
-        <div class="summary-card" style="border-color:var(--border-gold);"><h4>Vendors Deleted</h4><div class="value">10</div><div class="detail">Per Lisa's direction</div></div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>Fully Scraped</h4><div class="value">34 &rarr; 43</div><div class="detail">+9 vendors with strong data</div></div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>"Needs Scraping"</h4><div class="value">7 &rarr; 0</div><div class="detail">All previously pending vendors done</div></div>
+        <div class="summary-card" style="border-color:var(--border-gold);"><h4>New Products</h4><div class="value">+15,399</div><div class="detail">From 7 newly scraped vendors</div></div>
         <div class="summary-card" style="border-color:var(--border-gold);"><h4>AI-Enriched Products</h4><div class="value">53,347</div><div class="detail">Via GPT-4o-mini vision pipeline</div></div>
       </div>
 
-      <h3 class="cat-heading">Vendors That Improved Significantly</h3>
+      <h3 class="cat-heading">Newly Scraped Vendors</h3>
       <div class="table-wrap" style="margin-bottom:1.5rem;">
         <table>
-          <thead><tr><th>Vendor</th><th>Previous Status</th><th class="num">Prev Products</th><th>Current Status</th><th class="num">Current Products</th></tr></thead>
-          <tbody id="improved-table"></tbody>
+          <thead><tr><th>Vendor</th><th class="num">Products</th><th>Scraper Type</th><th>Notes</th></tr></thead>
+          <tbody id="scraped-table"></tbody>
         </table>
       </div>
 
-      <h3 class="cat-heading">New Vendors Added</h3>
+      <h3 class="cat-heading">What Was Fixed</h3>
       <div class="table-wrap" style="margin-bottom:1.5rem;">
         <table>
-          <thead><tr><th>Vendor</th><th class="num">Products</th><th>Category</th></tr></thead>
-          <tbody id="new-vendors-table"></tbody>
-        </table>
-      </div>
-
-      <h3 class="cat-heading">Data Quality Improvements</h3>
-      <div class="table-wrap" style="margin-bottom:1.5rem;">
-        <table>
-          <thead><tr><th>Vendor</th><th>What Changed</th></tr></thead>
-          <tbody id="quality-table"></tbody>
+          <thead><tr><th>Item</th><th>Status</th></tr></thead>
+          <tbody id="fixed-table"></tbody>
         </table>
       </div>
 
       <div class="highlights" style="border-color:rgba(248,113,113,0.25);">
         <h3>What's Still Stuck</h3>
         <ul>
+          <li><strong>A&amp;B Home</strong> — IP-blocked after 251 of ~7,500 products. Scraper reworked with 2s delays. Will retry once block expires.</li>
           <li><strong>Incomplete high-priority vendors</strong> — Lexington (26), Sherrill (18), Thibaut (4), Duralee (50), Christopher Guy (63) still have minimal data</li>
-          <li><strong>Cloudflare-blocked</strong> — Global Views still returns 0 products</li>
-          <li><strong>Login-gated</strong> — Vanguard Furniture still requires trade credentials</li>
-          <li><strong>Newly accessible vendors</strong> — 7 vendors Lisa confirmed are accessible need scraping</li>
+          <li><strong>Cloudflare-blocked</strong> — Global Views still returns 403</li>
+          <li><strong>Login-gated</strong> — Vanguard Furniture and Noir Furniture LA require trade credentials</li>
+          <li><strong>Dimensions gap</strong> — 14 vendors have dimensions on their sites that we're not capturing</li>
         </ul>
       </div>
     </div>
@@ -331,32 +310,31 @@
     <div class="section">
       <div class="section-header"><h2>Summary</h2></div>
       <div class="summary-grid">
-        <div class="summary-card"><h4>Strong Data</h4><div class="value">34</div><div class="detail">vendors / 106,611 products</div></div>
-        <div class="summary-card"><h4>Needs Improvement</h4><div class="value">11</div><div class="detail">vendors / 29,493 products</div></div>
-        <div class="summary-card"><h4>Incomplete</h4><div class="value">13</div><div class="detail">vendors / 769 products</div></div>
-        <div class="summary-card"><h4>Newly Accessible</h4><div class="value">7</div><div class="detail">vendors / needs scraping</div></div>
+        <div class="summary-card"><h4>Strong Data</h4><div class="value">43</div><div class="detail">vendors / 107,139 products</div></div>
+        <div class="summary-card"><h4>Needs Improvement</h4><div class="value">9</div><div class="detail">vendors / 46,877 products</div></div>
+        <div class="summary-card"><h4>Incomplete</h4><div class="value">13</div><div class="detail">vendors / 788 products</div></div>
         <div class="summary-card"><h4>Blocked</h4><div class="value">3</div><div class="detail">vendors / 0 products</div></div>
       </div>
       <div class="highlights">
         <h3>Key Highlights</h3>
         <ul>
-          <li><strong>77% of products</strong> (106,611) come from vendors with strong, complete data</li>
-          <li><strong>Top 5 vendors:</strong> Surya (19,761), Four Hands (17,911), Wendover Art Group (10,000), Eastern Accents (9,501), Maxwell Fabrics (7,449)</li>
+          <li><strong>107,139 products</strong> (69%) come from vendors with strong, complete data</li>
+          <li><strong>15,399 new products</strong> added since the Feb 16 report across 7 newly scraped vendors</li>
+          <li><strong>Top 5 vendors by product count:</strong> Surya (19,761), Four Hands (17,911), Wendover Art Group (10,000), Eastern Accents (9,501), Maxwell Fabrics (7,449)</li>
+          <li><strong>HVL Group</strong> is now the 6th largest vendor with 7,459 lighting products across 6 brands</li>
           <li><strong>Vision enrichment</strong> — 53,347 products have AI-generated descriptions via GPT-4o-mini</li>
           <li><strong>Cohere Rerank</strong> cross-encoder model improves search result relevance</li>
           <li><strong>Vendor diversity</strong> enforced — max 2 products per vendor in results</li>
-          <li><strong>10 vendors deleted</strong> per Lisa's direction — no longer needed</li>
         </ul>
       </div>
       <div class="next-steps">
         <h3>Recommended Next Steps</h3>
         <ol>
-          <li><strong>Scrape newly accessible vendors</strong> — HVL Group, A&B Home, Chelsea House, Noir, Southern Home, Woodbridge, Worlds Away</li>
+          <li><strong>Retry A&amp;B Home scrape</strong> — IP block should expire within 24 hours; will re-run to get all ~7,500 products</li>
           <li><strong>Re-scrape incomplete vendors</strong> — Lexington, Sherrill, Thibaut, Duralee, Christopher Guy</li>
           <li><strong>Capture dimensions</strong> — 14 vendors have dimensions we're not scraping</li>
-          <li><strong>Improve Maxwell Fabrics</strong> — needs detail-page scrape</li>
-          <li><strong>Improve Tomlinson</strong> — same issue as Maxwell</li>
-          <li><strong>Headless browser</strong> for Global Views (Cloudflare)</li>
+          <li><strong>Improve Maxwell Fabrics</strong> — 7,449 products but only listing-level data</li>
+          <li><strong>Headless browser</strong> for Global Views (Cloudflare-blocked)</li>
           <li><strong>Trade account</strong> — Vanguard requires login credentials</li>
         </ol>
       </div>
@@ -369,108 +347,127 @@
   <script>
     const strongVendors = [
       ["Four Hands",17911,100,100,100,100,100,100,88],
-      ["Jonathan Charles",429,100,100,100,100,100,88,100],
-      ["Caracole",1125,100,100,100,100,57,88,100],
-      ["Currey & Company",3102,100,100,"—",100,100,100,"—"],
-      ["Theodore Alexander",2440,100,100,"—",100,100,86,59],
-      ["ELK Home",2432,100,100,"—",100,100,71,100],
-      ["Cyan Design",2303,100,100,"—",100,100,82,100],
-      ["Renwil",1559,100,100,"—",100,99,62,100],
-      ["Uttermost",4719,100,100,"—",100,86,10,100],
-      ["Old Biscayne Designs",3323,100,100,72,100,89,90,"—"],
-      ["Loloi Rugs",5089,98,98,"—",100,5,"—",100],
-      ["Eastern Accents",9501,100,87,12,100,32,"—",100],
-      ["Jaipur Living",2740,100,100,"—",100,"—","—",100],
       ["Wendover Art Group",10000,100,100,"—",100,72,56,100],
-      ["Shadow Catchers Art",4193,100,100,"—",100,14,12,100],
-      ["Paragon PG",4038,100,100,"—",100,"—","—",100],
-      ["Propac Images",1292,100,100,"—",100,"—","—",100],
-      ["Made Goods",1484,100,100,"—",100,"—","—",100],
-      ["Savoy House",2099,100,100,"—",100,"—","—",100],
+      ["HVL Group (Hudson Valley)",7459,100,100,100,86,20,12,80],
+      ["Fairfield Chair",6515,100,100,"—",98,100,82,100],
+      ["Loloi Rugs",5089,100,100,"—",100,"—","—",100],
+      ["Uttermost",4719,100,100,"—","—","—","—",100],
+      ["Shadow Catchers Art",4193,100,100,"—",100,"—","—",100],
+      ["Paragon PG",4038,100,100,"—","—","—","—",100],
+      ["Old Biscayne Designs",3323,100,100,76,"—",96,96,"—"],
+      ["Currey & Company",3102,100,100,79,100,100,100,99],
+      ["Jaipur Living",2740,100,100,"—",92,"—","—",100],
+      ["Gabriella White",2550,95,97,"—",100,80,13,100],
+      ["Theodore Alexander",2440,100,100,"—","—",100,86,64],
+      ["ELK Home",2432,100,100,"—",100,36,24,100],
+      ["Cyan Design",2303,92,92,"—",100,32,27,100],
+      ["Bramble Co",2233,100,100,100,"—",30,"—","—"],
+      ["Regina Andrew",2175,42,42,"—",100,42,26,100],
+      ["Savoy House",2099,100,100,"—","—","—","—",100],
+      ["Chelsea House",2076,"—",100,100,"—",100,93,87],
+      ["Renwil",1559,98,98,"—",100,"—","—",100],
+      ["Made Goods",1484,100,100,"—","—","—","—",100],
+      ["Swaim Inc.",1317,100,93,"—",19,"—","—",100],
+      ["Propac Images",1292,100,100,"—","—","—","—",100],
+      ["Woodbridge Furniture",1245,100,94,"—",100,"—","—",100],
+      ["Southern Home Inc.",1184,96,100,"—",31,"—","—",100],
+      ["Caracole",1125,100,100,100,100,50,89,100],
+      ["Universal Furniture",1097,100,100,99,"—","—","—","—"],
+      ["Interlude Home",1076,76,100,"—",90,"—","—",100],
+      ["Summer Classics",1027,85,84,"—",100,"—","—",100],
+      ["Worlds Away",951,100,100,97,"—",71,14,"—"],
       ["Jamie Young Co",870,100,100,"—",100,"—","—",100],
-      ["Maitland-Smith",768,100,99,100,100,6,5,90],
-      ["Ambella Home",708,100,100,100,100,"—","—",100],
-      ["Artistica Home",612,100,100,100,100,22,20,72],
-      ["Universal Furniture",1097,100,100,99,100,"—","—","—"],
-      ["Summer Classics",1027,98,96,"—",100,84,20,100],
-      ["Interlude Home",1076,77,100,"—",100,"—","—",100],
-      ["Eloquence",398,100,100,"—",100,"—","—",100],
-      ["Padma's Plantation",213,100,100,"—",100,"—","—",100],
-      ["Selamat Designs",235,98,98,"—",100,"—","—",100],
-      ["James Martin Vanities",498,100,100,"—",100,6,6,100],
+      ["Maitland-Smith",768,100,99,100,"—","—","—",91],
+      ["Ambella Home",708,100,100,100,"—","—","—",100],
+      ["Artistica Home",612,100,100,100,"—","—","—",74],
+      ["Sarreid Ltd",585,100,100,70,100,"—","—","—"],
+      ["Essentials for Living",561,100,"—","—",100,"—","—",100],
+      ["James Martin Vanities",498,100,100,"—",100,"—","—",100],
+      ["Jonathan Charles",429,100,100,100,100,100,90,100],
       ["Hekman",419,100,100,"—",100,"—","—",100],
+      ["Eloquence",398,100,100,"—",100,"—","—",100],
+      ["Selamat Designs",235,98,98,"—",100,"—","—",100],
+      ["Padma's Plantation",213,100,100,"—",100,"—","—",100],
       ["Greenhouse Fabrics",89,100,100,"—","—",100,"—","—"],
-      ["Sarreid Ltd",585,100,100,"—",100,"—","—",100],
-      ["Swaim Inc.",1317,100,91,"—",100,6,"—",100],
     ];
     const improveVendors = [
-      ["Surya",19761,"Product names are inventory codes. Vision enrichment has added descriptions.","Largest vendor. AI uses enriched descriptions."],
-      ["Bernhardt",5871,"14% missing descriptions. 14% missing photos.","Data thinner than ideal."],
-      ["Fairfield Chair",6515,"No dimensions. Material/finish ~50%.","Basic search works but lacks detail."],
-      ["Regina Andrew",2175,"34% missing descriptions and photos.","Some products lack images."],
-      ["Gabriella White",2550,"No material or finish data.","AI matches by name/description only."],
-      ["Maxwell Fabrics",7449,"Only 6% have descriptions or images.","Needs detail-page re-scrape."],
-      ["Rowe Furniture",1840,"26% missing photos. No material/finish.","Some products lack images."],
-      ["Tomlinson Companies",1770,"Only 16% have descriptions or images.","Needs detail-page scrape."],
-      ["Essentials for Living",561,"Zero product photos.","No images in results."],
-      ["Precedent Furniture",299,"Zero product photos. No material data.","Name-only search, no images."],
-      ["Tuuci",135,"Only 22% have photos. No pricing.","Limited display quality."],
+      ["Surya",19761,"Product names are inventory codes. Vision enrichment has added descriptions.","Largest vendor by count. AI uses enriched descriptions."],
+      ["Eastern Accents",9501,"Only 2% have dimensions despite selling bedding/pillows with sizes.","One of the biggest fabric vendors — dimension data would help."],
+      ["Maxwell Fabrics",7449,"Only 5% have descriptions or images (listing-level data only).","Large catalog but very thin data. Needs re-scrape with detail pages."],
+      ["Bernhardt",5871,"14% missing descriptions, 30% missing photos.","One of the biggest furniture vendors — data thinner than ideal."],
+      ["Rowe Furniture",1840,"26% missing photos. No pricing.","Some products won't display images."],
+      ["Tomlinson Companies",1770,"64% have descriptions/images (up from 16%).","Improved but still has gaps."],
+      ["Precedent Furniture",299,"Zero product photos. No pricing.","Products searchable by name only, no images."],
+      ["A&B Home",251,"IP-blocked after 251 products. Site rate-limits aggressively.","Partial data only — retry needed after IP block expires."],
+      ["Tuuci",135,"Only 22% have photos. No pricing.","Umbrella/shade vendor — limited display quality."],
     ];
     const incompleteVendors = [
       ["Artesia Collections",480,"Broken — no usable data"],
       ["Lexington Home Brands",26,"Major vendor — only 26 captured"],
-      ["Sherrill Furniture",18,"Only category pages captured, not products"],
+      ["Sherrill Furniture",18,"Major upholstery vendor — only 18 category pages captured"],
       ["McKinley Leather",10,"Only 10 products"],
       ["Style Upholstering",11,"Only 11 products"],
       ["Thibaut Design",4,"Major fabric vendor — only 4 products"],
       ["Duralee / Robert Allen",50,"Large fabric house — only 50 captured"],
       ["Christopher Guy",63,"Luxury vendor — likely hundreds more"],
       ["Gracie Studio",50,"Needs full catalog scrape"],
-      ["Peyton Webster",57,"Needs verification"],
+      ["Peyton Webster",57,"No descriptions or images — needs re-scrape"],
       ["Rowley Company",15,"Workroom supplies — low priority"],
       ["Phillips Scott",1,"Only 1 product"],
       ["Horizon Shades",3,"Only 3 products"],
     ];
-    const accessibleVendors = [
-      ["HVL Group (Hudson Valley)","Was marked login-gated","Lisa confirms totally accessible"],
-      ["A&B Home","Was marked password-protected","Lisa confirms website is fine"],
-      ["Chelsea House","Was marked Cloudflare blocked","Lisa confirms fine"],
-      ["Noir Furniture LA","Was marked Cloudflare blocked","Lisa confirms fine"],
-      ["Southern Home Inc.","Was marked Cloudflare blocked","Lisa confirms fine"],
-      ["Woodbridge Furniture","Was marked DNS error","Lisa confirms fine"],
-      ["Worlds Away","Was marked Cloudflare blocked","Lisa confirms fine"],
-    ];
     const blockedVendors = [
       ["Vanguard Furniture","Requires trade account login"],
       ["Global Views","Cloudflare security blocks access"],
-      ["Bramble Co","Complex website — needs specialized scraper"],
+      ["Noir Furniture LA","Requires login to access product catalog"],
+    ];
+    const newlyScrapedVendors = [
+      ["HVL Group (Hudson Valley)",7459,"Custom API + HTML","6 brands: Hudson Valley, Troy, Corbett, Mitzi, CSL, Sonneman"],
+      ["Bramble Co",2233,"REST API","Open ServiceStack API — rich data with dimensions, materials"],
+      ["Chelsea House",2076,"SuperCat platform","Decorative accessories, lighting, artwork, mirrors"],
+      ["Woodbridge Furniture",1245,"Magento GraphQL","Traditional furniture and case goods"],
+      ["Southern Home Inc.",1184,"WooCommerce Store API","Furniture and decor"],
+      ["Worlds Away",951,"BigCommerce HTML","Furniture, lighting, mirrors, accessories. Includes dimensions."],
+      ["A&B Home",251,"WooCommerce HTML","Partially complete — IP blocked after 251 products. Will retry."],
+    ];
+    const fixedItems = [
+      ["HVL Group — was \"login-gated\"","Scraped: 7,459 products"],
+      ["Chelsea House — was \"Cloudflare blocked\"","Scraped: 2,076 products"],
+      ["Bramble Co — was \"complex site\"","Scraped: 2,233 products (open API found!)"],
+      ["Worlds Away — was \"Cloudflare blocked\"","Scraped: 951 products"],
+      ["Southern Home — was \"Cloudflare blocked\"","Scraped: 1,184 products"],
+      ["Woodbridge Furniture — was \"DNS error\"","Scraped: 1,245 products (URL was wrong)"],
+      ["A&B Home — was \"password-protected\"","Partially scraped: 251 products (IP blocked, retry pending)"],
+      ["Magento scraper price bug","Fixed — was showing $0 for some products"],
+      ["Magento placeholder images","Fixed — placeholder images now filtered out"],
     ];
     const categoryData = {
       "Furniture": [
-        ["Four Hands",17911],["Bernhardt",5871],["Uttermost",4719],["Old Biscayne Designs",3323],
-        ["Gabriella White",2550],["Theodore Alexander",2440],["ELK Home",2432],
-        ["Tomlinson Companies",1770],["Made Goods",1484],["Swaim Inc.",1317],
-        ["Caracole",1125],["Universal Furniture",1097],["Interlude Home",1076],
-        ["Maitland-Smith",768],["Ambella Home",708],["Artistica Home",612],
-        ["Sarreid Ltd",585],["Essentials for Living",561],["Artesia Collections",480],
-        ["Jonathan Charles",429],["Eloquence",398],["Selamat Designs",235],
+        ["Four Hands",17911],["HVL Group (Hudson Valley)",7459],["Fairfield Chair",6515],
+        ["Bernhardt",5871],["Old Biscayne Designs",3323],["Gabriella White",2550],
+        ["Theodore Alexander",2440],["ELK Home",2432],["Bramble Co",2233],
+        ["Chelsea House",2076],["Rowe Furniture",1840],["Tomlinson Companies",1770],
+        ["Made Goods",1484],["Swaim Inc.",1317],["Woodbridge Furniture",1245],
+        ["Southern Home Inc.",1184],["Caracole",1125],["Universal Furniture",1097],
+        ["Interlude Home",1076],["Worlds Away",951],["Maitland-Smith",768],
+        ["Ambella Home",708],["Artistica Home",612],["Sarreid Ltd",585],
+        ["Essentials for Living",561],["Artesia Collections",480],["Jonathan Charles",429],
+        ["Eloquence",398],["A&B Home",251],["Selamat Designs",235],
         ["Padma's Plantation",213],["Christopher Guy",63],["Lexington Home Brands",26],
-        ["Phillips Scott",1],["Vanguard Furniture",0],["A&B Home",0],
-        ["Bramble Co",0],["Noir Furniture LA",0],["Southern Home Inc.",0],
-        ["Woodbridge Furniture",0],["Worlds Away",0]
+        ["Phillips Scott",1],["Vanguard Furniture",0],["Noir Furniture LA",0]
       ],
       "Upholstery / Seating": [
         ["Fairfield Chair",6515],["Bernhardt",5871],["Gabriella White",2550],
-        ["Theodore Alexander",2440],["Rowe Furniture",1840],["Swaim Inc.",1317],
-        ["Caracole",1125],["Precedent Furniture",299],["Christopher Guy",63],
-        ["Sherrill Furniture",18],["Style Upholstering",11],["McKinley Leather",10],
-        ["Vanguard Furniture",0]
+        ["Theodore Alexander",2440],["Bramble Co",2233],["Rowe Furniture",1840],
+        ["Swaim Inc.",1317],["Caracole",1125],["Worlds Away",951],
+        ["Precedent Furniture",299],["Christopher Guy",63],["Sherrill Furniture",18],
+        ["Style Upholstering",11],["McKinley Leather",10],["Vanguard Furniture",0]
       ],
       "Lighting": [
-        ["Uttermost",4719],["Currey & Company",3102],["ELK Home",2432],
-        ["Cyan Design",2303],["Regina Andrew",2175],["Savoy House",2099],
-        ["Renwil",1559],["Made Goods",1484],["Jamie Young Co",870],
-        ["Chelsea House",0],["HVL Group (Hudson Valley)",0],["Worlds Away",0]
+        ["HVL Group (Hudson Valley)",7459],["Uttermost",4719],["Currey & Company",3102],
+        ["ELK Home",2432],["Cyan Design",2303],["Regina Andrew",2175],
+        ["Savoy House",2099],["Chelsea House",2076],["Renwil",1559],
+        ["Made Goods",1484],["Worlds Away",951],["Jamie Young Co",870]
       ],
       "Rugs": [
         ["Surya",19761],["Loloi Rugs",5089],["Jaipur Living",2740],["Peyton Webster",57]
@@ -481,9 +478,10 @@
       ],
       "Decor / Accessories": [
         ["Surya",19761],["Uttermost",4719],["Currey & Company",3102],
-        ["Cyan Design",2303],["Renwil",1559],["Made Goods",1484],
-        ["Interlude Home",1076],["Jamie Young Co",870],["Sarreid Ltd",585],
-        ["A&B Home",0],["Chelsea House",0],["Global Views",0]
+        ["Cyan Design",2303],["Chelsea House",2076],["Renwil",1559],
+        ["Made Goods",1484],["Interlude Home",1076],["Worlds Away",951],
+        ["Jamie Young Co",870],["Sarreid Ltd",585],["A&B Home",251],
+        ["Global Views",0]
       ],
       "Fabrics / Textiles": [
         ["Eastern Accents",9501],["Maxwell Fabrics",7449],["Greenhouse Fabrics",89],
@@ -505,36 +503,6 @@
         ["Horizon Shades",3]
       ]
     };
-    const improvedVendors = [
-      ["Theodore Alexander","Incomplete",7,"Fully Scraped",2440],
-      ["Ambella Home","Not Yet Scraped",0,"Fully Scraped",708],
-      ["Paragon PG","Not Yet Scraped",0,"Fully Scraped",4038],
-      ["Sarreid Ltd","Not Yet Scraped",0,"Fully Scraped",585],
-      ["Propac Images","Not Scrapeable",0,"Fully Scraped",1292],
-      ["Interlude Home","Not Scrapeable",0,"Scraped",1076],
-      ["Tomlinson Companies","Not Yet Scraped",0,"Scraped (thin)",1770],
-      ["Maxwell Fabrics","Not Yet Scraped",0,"Scraped (thin)",7449],
-      ["Precedent Furniture","Not Yet Scraped",0,"Scraped",299],
-      ["Peyton Webster","Not Yet Scraped",0,"Scraped",57],
-      ["Gracie Studio","Not Yet Scraped",0,"Incomplete",50],
-    ];
-    const newVendors = [
-      ["ELK Home",2432,"Lighting, furniture, decor"],
-      ["Renwil",1559,"Decor, mirrors, lighting"],
-      ["Swaim Inc.",1317,"Upholstery, custom furniture"],
-      ["Summer Classics",1027,"Outdoor furniture"],
-      ["Tuuci",135,"Outdoor umbrellas, shade"],
-      ["Greenhouse Fabrics",89,"Fabrics, textiles"],
-      ["Rowley Company",15,"Workroom supplies"],
-      ["Horizon Shades",3,"Window treatments"],
-    ];
-    const qualityImprovements = [
-      ["Surya (19,761 products)","Previously no descriptions — now 100% have AI-generated descriptions via vision enrichment"],
-      ["Wendover Art Group (10,000)","Previously no descriptions — now 100% have descriptions"],
-      ["Cyan Design (2,303)","Description coverage: 79% &rarr; 100%. Image coverage: 83% &rarr; 100%"],
-      ["Four Hands (17,911)","Description coverage: 97% &rarr; 100%"],
-      ["Gabriella White (2,550)","Previously 85% missing descriptions — now 98% have descriptions"],
-    ];
 
     function pctClass(v) {
       if (v === "—") return "pct-none";
@@ -553,9 +521,6 @@
     // Incomplete
     document.getElementById("incomplete-table").innerHTML = incompleteVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td></tr>`).join("");
 
-    // Accessible
-    document.getElementById("accessible-table").innerHTML = accessibleVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td><td class="issue-cell" style="color:var(--green)">${r[2]}</td></tr>`).join("");
-
     // Blocked
     document.getElementById("blocked-table").innerHTML = blockedVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td></tr>`).join("");
 
@@ -570,14 +535,11 @@
       catContainer.innerHTML += html;
     }
 
-    // Improved vendors
-    document.getElementById("improved-table").innerHTML = improvedVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td><td class="num pct-low">${fmtNum(r[2])}</td><td class="issue-cell" style="color:var(--green)">${r[3]}</td><td class="num pct-high">${fmtNum(r[4])}</td></tr>`).join("");
+    // Newly scraped vendors
+    document.getElementById("scraped-table").innerHTML = newlyScrapedVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td><td class="issue-cell">${r[3]}</td></tr>`).join("");
 
-    // New vendors
-    document.getElementById("new-vendors-table").innerHTML = newVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td></tr>`).join("");
-
-    // Quality improvements
-    document.getElementById("quality-table").innerHTML = qualityImprovements.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td></tr>`).join("");
+    // Fixed items
+    document.getElementById("fixed-table").innerHTML = fixedItems.map(r => `<tr><td>${r[0]}</td><td class="issue-cell" style="color:var(--green)">${r[1]}</td></tr>`).join("");
   </script>
 
 </body>
