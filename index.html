@@ -161,34 +161,18 @@
       <p style="margin-top:0.75rem;font-size:0.75rem;color:var(--text-muted);">Dashes (&mdash;) mean the vendor's website doesn't publish that data, which is normal for trade-only vendors.</p>
     </div>
 
-    <!-- Project Documentation -->
-    <div class="docs-nav">
-      <h3>Project Documentation</h3>
-      <p class="docs-subtitle">Core product documentation for the Evenflow Product Search chatbot — an AI-powered vertical search engine that consolidates 60+ trade vendor catalogs into a single conversational interface for interior designers.</p>
+    <!-- Live MVP -->
+    <div class="docs-nav" style="margin-bottom:2rem;">
+      <h3>Live MVP</h3>
+      <p class="docs-subtitle">The Evenflow Product Search chatbot is live and searchable. Try it out:</p>
       <div class="docs-grid">
-        <a href="https://github.com/Onada-Dev/evenflow-docs/blob/master/PRD.md" class="doc-card" target="_blank">
-          <div class="doc-card-label">Product Requirements</div>
-          <div class="doc-card-title">Product Requirements Document</div>
-          <div class="doc-card-desc">Complete system specification — architecture, search pipeline, data models, API endpoints, frontend design, scraper pipeline, deployment, and roadmap. Covers all technical and business requirements for the product.</div>
-          <div class="doc-card-arrow">View PRD &rarr;</div>
-        </a>
-        <a href="https://github.com/Onada-Dev/evenflow-docs/blob/master/UserStories.md" class="doc-card" target="_blank">
-          <div class="doc-card-label">User Stories</div>
-          <div class="doc-card-title">User Stories &amp; Acceptance Criteria</div>
-          <div class="doc-card-desc">35 user stories across 10 epics — product search, conversational experience, product display, chat interface, data pipeline, vendor management, authentication, collections, analytics, and reliability. Each with acceptance criteria and implementation status.</div>
-          <div class="doc-card-arrow">View User Stories &rarr;</div>
+        <a href="https://evenflow-chatbot-production.up.railway.app" class="doc-card" target="_blank">
+          <div class="doc-card-label">Live App</div>
+          <div class="doc-card-title">Evenflow Product Search</div>
+          <div class="doc-card-desc">AI-powered conversational product search across 65 trade vendor catalogs. 154,804 products searchable with natural language queries, semantic vector search, and Cohere cross-encoder reranking.</div>
+          <div class="doc-card-arrow">Open App &rarr;</div>
         </a>
       </div>
-    </div>
-
-    <!-- Action Items for Lisa -->
-    <div class="action-box">
-      <h3>Action Items for Lisa</h3>
-      <ol>
-        <li><strong>Fill in the Rank column</strong> in the "Vendor Rankings by Category" section below (1 = most important vendor in that category)</li>
-        <li><strong>Confirm Noir Furniture LA</strong> — Is the login requirement new, or is there a public-facing catalog URL we should use?</li>
-        <li><strong>Vanguard Furniture</strong> — Can you provide trade login credentials so we can scrape their catalog?</li>
-      </ol>
     </div>
 
     <!-- Section 1: Strong Data -->
@@ -252,15 +236,6 @@
           <tbody id="blocked-table"></tbody>
         </table>
       </div>
-    </div>
-
-    <!-- Section 5: Category Rankings -->
-    <div class="section">
-      <div class="section-header">
-        <h2>Vendor Rankings by Category</h2>
-      </div>
-      <p class="section-desc"><strong>Lisa — please fill in the Rank column</strong> (1 = most important) for each vendor within each category. This will help us weight search results so the most important vendors appear first. A vendor can appear in multiple categories.</p>
-      <div id="category-tables"></div>
     </div>
 
     <!-- Progress Since Last Report -->
@@ -441,69 +416,6 @@
       ["Magento scraper price bug","Fixed — was showing $0 for some products"],
       ["Magento placeholder images","Fixed — placeholder images now filtered out"],
     ];
-    const categoryData = {
-      "Furniture": [
-        ["Four Hands",17911],["HVL Group (Hudson Valley)",7459],["Fairfield Chair",6515],
-        ["Bernhardt",5871],["Old Biscayne Designs",3323],["Gabriella White",2550],
-        ["Theodore Alexander",2440],["ELK Home",2432],["Bramble Co",2233],
-        ["Chelsea House",2076],["Rowe Furniture",1840],["Tomlinson Companies",1770],
-        ["Made Goods",1484],["Swaim Inc.",1317],["Woodbridge Furniture",1245],
-        ["Southern Home Inc.",1184],["Caracole",1125],["Universal Furniture",1097],
-        ["Interlude Home",1076],["Worlds Away",951],["Maitland-Smith",768],
-        ["Ambella Home",708],["Artistica Home",612],["Sarreid Ltd",585],
-        ["Essentials for Living",561],["Artesia Collections",480],["Jonathan Charles",429],
-        ["Eloquence",398],["A&B Home",251],["Selamat Designs",235],
-        ["Padma's Plantation",213],["Christopher Guy",63],["Lexington Home Brands",26],
-        ["Phillips Scott",1],["Vanguard Furniture",0],["Noir Furniture LA",0]
-      ],
-      "Upholstery / Seating": [
-        ["Fairfield Chair",6515],["Bernhardt",5871],["Gabriella White",2550],
-        ["Theodore Alexander",2440],["Bramble Co",2233],["Rowe Furniture",1840],
-        ["Swaim Inc.",1317],["Caracole",1125],["Worlds Away",951],
-        ["Precedent Furniture",299],["Christopher Guy",63],["Sherrill Furniture",18],
-        ["Style Upholstering",11],["McKinley Leather",10],["Vanguard Furniture",0]
-      ],
-      "Lighting": [
-        ["HVL Group (Hudson Valley)",7459],["Uttermost",4719],["Currey & Company",3102],
-        ["ELK Home",2432],["Cyan Design",2303],["Regina Andrew",2175],
-        ["Savoy House",2099],["Chelsea House",2076],["Renwil",1559],
-        ["Made Goods",1484],["Worlds Away",951],["Jamie Young Co",870]
-      ],
-      "Rugs": [
-        ["Surya",19761],["Loloi Rugs",5089],["Jaipur Living",2740],["Peyton Webster",57]
-      ],
-      "Art / Wall Decor": [
-        ["Wendover Art Group",10000],["Uttermost",4719],["Shadow Catchers Art",4193],
-        ["Paragon PG",4038],["Renwil",1559],["Propac Images",1292],["Christopher Guy",63]
-      ],
-      "Decor / Accessories": [
-        ["Surya",19761],["Uttermost",4719],["Currey & Company",3102],
-        ["Cyan Design",2303],["Chelsea House",2076],["Renwil",1559],
-        ["Made Goods",1484],["Interlude Home",1076],["Worlds Away",951],
-        ["Jamie Young Co",870],["Sarreid Ltd",585],["A&B Home",251],
-        ["Global Views",0]
-      ],
-      "Fabrics / Textiles": [
-        ["Eastern Accents",9501],["Maxwell Fabrics",7449],["Greenhouse Fabrics",89],
-        ["Duralee / Robert Allen",50],["Thibaut Design",4]
-      ],
-      "Outdoor": [
-        ["Gabriella White",2550],["Summer Classics",1027],["Tuuci",135],["Lexington Home Brands",26]
-      ],
-      "Bedding / Pillows": [
-        ["Surya",19761],["Eastern Accents",9501]
-      ],
-      "Wallcoverings": [
-        ["Gracie Studio",50],["Thibaut Design",4]
-      ],
-      "Bathroom": [
-        ["Ambella Home",708],["James Martin Vanities",498]
-      ],
-      "Window Treatments": [
-        ["Horizon Shades",3]
-      ]
-    };
-
     function pctClass(v) {
       if (v === "—") return "pct-none";
       if (v >= 90) return "pct-high";
@@ -523,17 +435,6 @@
 
     // Blocked
     document.getElementById("blocked-table").innerHTML = blockedVendors.map(r => `<tr><td>${r[0]}</td><td class="issue-cell">${r[1]}</td></tr>`).join("");
-
-    // Category ranking tables
-    const catContainer = document.getElementById("category-tables");
-    for (const [cat, vendors] of Object.entries(categoryData)) {
-      let html = `<h3 class="cat-heading">${cat}</h3><div class="table-wrap" style="margin-bottom:1.5rem;"><table><thead><tr><th style="width:60px">Rank</th><th>Vendor</th><th class="num">Products</th></tr></thead><tbody>`;
-      for (const [name, count] of vendors) {
-        html += `<tr><td style="color:var(--gold-light)">___</td><td>${name}</td><td class="num">${fmtNum(count)}</td></tr>`;
-      }
-      html += `</tbody></table></div>`;
-      catContainer.innerHTML += html;
-    }
 
     // Newly scraped vendors
     document.getElementById("scraped-table").innerHTML = newlyScrapedVendors.map(r => `<tr><td>${r[0]}</td><td class="num">${fmtNum(r[1])}</td><td class="issue-cell">${r[2]}</td><td class="issue-cell">${r[3]}</td></tr>`).join("");
