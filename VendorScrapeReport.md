@@ -1,212 +1,190 @@
-# Evenflow Interiors — Vendor Scrape Report
+# LuxeScout v2 — Data Quality & Search Report
 
-**Date:** February 20, 2026
-**Total Products in Database:** 154,804
-**Vendors with Products:** 65 of 68 registered
-**AI Search Status:** Live and searchable at the Evenflow Product Search chatbot
-
----
-
-## How to Read This Report
-
-| Column | What It Means |
-|--------|---------------|
-| **Products** | Total number of products pulled from this vendor |
-| **Desc%** | Percentage of products with a written description (helps the AI understand and match products) |
-| **Img%** | Percentage of products with a photo |
-| **Dims%** | Percentage of products with dimensions (W x D x H) |
-| **Price%** | Percentage of products with pricing info (many trade vendors hide prices) |
-| **Mat%** | Percentage of products listing their material (wood, marble, iron, etc.) |
-| **Fin%** | Percentage of products listing their finish (e.g. dark walnut, polished brass) |
-| **Stock%** | Percentage of products with stock/availability info |
-
-Dashes (—) mean the vendor's website doesn't publish that information, which is normal for trade-only vendors.
+**Date:** February 21, 2026
+**Database:** 136,916 products across 58 vendors (v2_ tables)
+**Embeddings:** 100% coverage (Cohere embed-v4, 1024 dimensions)
 
 ---
 
-## Fully Scraped Vendors — Strong Data Quality
+## What Changed in v2
 
-These vendors have rich, complete product data. Search results from these will look great.
-
-| Vendor | Products | Desc% | Img% | Dims% | Price% | Mat% | Fin% | Stock% |
-|--------|----------|-------|------|-------|--------|------|------|--------|
-| Four Hands | 17,911 | 100 | 100 | 100 | 100 | 100 | 100 | 88 |
-| HVL Group (Hudson Valley) | 7,459 | 100 | 100 | 100 | 86 | 20 | 12 | 80 |
-| Wendover Art Group | 10,000 | 100 | 100 | — | 100 | 72 | 56 | 100 |
-| Fairfield Chair | 6,515 | 100 | 100 | — | 98 | 100 | 82 | 100 |
-| Loloi Rugs | 5,089 | 100 | 100 | — | 100 | — | — | 100 |
-| Uttermost | 4,719 | 100 | 100 | — | — | — | — | 100 |
-| Shadow Catchers Art | 4,193 | 100 | 100 | — | 100 | — | — | 100 |
-| Paragon PG | 4,038 | 100 | 100 | — | — | — | — | 100 |
-| Old Biscayne Designs | 3,323 | 100 | 100 | 76 | — | 96 | 96 | — |
-| Currey & Company | 3,102 | 100 | 100 | 79 | 100 | 100 | 100 | 99 |
-| Jaipur Living | 2,740 | 100 | 100 | — | 92 | — | — | 100 |
-| Gabriella White | 2,550 | 95 | 97 | — | 100 | 80 | 13 | 100 |
-| Theodore Alexander | 2,440 | 100 | 100 | — | — | 100 | 86 | 64 |
-| ELK Home | 2,432 | 100 | 100 | — | 100 | 36 | 24 | 100 |
-| Cyan Design | 2,303 | 92 | 92 | — | 100 | 32 | 27 | 100 |
-| Bramble Co | 2,233 | 100 | 100 | 100 | — | 30 | — | — |
-| Regina Andrew | 2,175 | 42 | 42 | — | 100 | 42 | 26 | 100 |
-| Chelsea House | 2,076 | — | 100 | 100 | — | 100 | 93 | 87 |
-| Savoy House | 2,099 | 100 | 100 | — | — | — | — | 100 |
-| Renwil | 1,559 | 98 | 98 | — | 100 | — | — | 100 |
-| Made Goods | 1,484 | 100 | 100 | — | — | — | — | 100 |
-| Propac Images | 1,292 | 100 | 100 | — | — | — | — | 100 |
-| Woodbridge Furniture | 1,245 | 100 | 94 | — | 100 | — | — | 100 |
-| Southern Home Inc. | 1,184 | 96 | 100 | — | 31 | — | — | 100 |
-| Swaim Inc. | 1,317 | 100 | 93 | — | 19 | — | — | 100 |
-| Caracole | 1,125 | 100 | 100 | 100 | 100 | 50 | 89 | 100 |
-| Universal Furniture | 1,097 | 100 | 100 | 99 | — | — | — | — |
-| Interlude Home | 1,076 | 76 | 100 | — | 90 | — | — | 100 |
-| Summer Classics | 1,027 | 85 | 84 | — | 100 | — | — | 100 |
-| Worlds Away | 951 | 100 | 100 | 97 | — | 71 | 14 | — |
-| Jamie Young Co | 870 | 100 | 100 | — | 100 | — | — | 100 |
-| Maitland-Smith | 768 | 100 | 99 | 100 | — | — | — | 91 |
-| Ambella Home | 708 | 100 | 100 | 100 | — | — | — | 100 |
-| Artistica Home | 612 | 100 | 100 | 100 | — | — | — | 74 |
-| Sarreid Ltd | 585 | 100 | 100 | 70 | 100 | — | — | — |
-| Essentials for Living | 561 | 100 | — | — | 100 | — | — | 100 |
-| James Martin Vanities | 498 | 100 | 100 | — | 100 | — | — | 100 |
-| Jonathan Charles | 429 | 100 | 100 | 100 | 100 | 100 | 90 | 100 |
-| Hekman | 419 | 100 | 100 | — | 100 | — | — | 100 |
-| Eloquence | 398 | 100 | 100 | — | 100 | — | — | 100 |
-| Selamat Designs | 235 | 98 | 98 | — | 100 | — | — | 100 |
-| Padma's Plantation | 213 | 100 | 100 | — | 100 | — | — | 100 |
-| Greenhouse Fabrics | 89 | 100 | 100 | — | — | 100 | — | — |
-
-> **Dimensions gap:** Lisa reports that these vendors should have dimensions available on their sites, but we are not currently capturing them: **Loloi Rugs, Eastern Accents, Jaipur Living, Jamie Young Co, Savoy House, Made Goods, Uttermost, Padma's Plantation, Eloquence, Selamat Designs, James Martin Vanities, Hekman, Cyan Design, Shadow Catchers Art**. This is a scraper improvement item.
+| Component | Old MVP | LuxeScout v2 |
+|-----------|---------|-------------|
+| Total products | 154,804 | 136,916 (-12%, removed deleted vendors) |
+| Vendors | 68 | 58 (10 client-deleted vendors removed) |
+| Embeddings | OpenAI text-embedding-3 (1536d) | Cohere embed-v4 (1024d) — higher MTEB score |
+| Search method | Vector-only + attribute rerank | Hybrid (vector + BM25 + RRF) + Cohere Rerank 3.5 |
+| Reranking | Basic attribute matching | Cohere Rerank 3.5 (ML-based semantic) |
+| Feedback loop | None | Thumbs up/down + comments |
+| Vendor tiering | None | Top 5/10/20 boost system |
+| Category priorities | None | Per-category vendor boost/exclusion |
 
 ---
 
-## Scraped Vendors — Data Needs Improvement
+## Overall Data Quality
 
-These vendors are in the database but have data gaps that may affect how well the AI can find and describe their products.
-
-| Vendor | Products | Issue | Impact |
-|--------|----------|-------|--------|
-| Surya | 19,761 | Product names are inventory codes (e.g. "AAM-008"). Vision enrichment has added descriptions. | Largest vendor by count. AI uses enriched descriptions for search. |
-| Eastern Accents | 9,501 | Only 2% have dimensions despite selling bedding/pillows with sizes. | One of the biggest fabric vendors — dimension data would help. |
-| Bernhardt | 5,871 | 14% missing descriptions, 30% missing photos. | One of the biggest furniture vendors — data is thinner than ideal. |
-| Maxwell Fabrics | 7,449 | Only 5% have descriptions or images (listing-level data only). | Large catalog but very thin data. Needs re-scrape with detail pages. |
-| Rowe Furniture | 1,840 | 26% missing photos. No pricing. | Some products won't display images. |
-| Tomlinson Companies | 1,770 | 64% have descriptions/images (up from 16%). | Improved but still has gaps. |
-| A&B Home | 251 | IP-blocked after 251 products. Site rate-limits aggressively. | Only partial data — retry needed after IP block expires. |
-| Precedent Furniture | 299 | Zero product photos. No pricing. | Products searchable by name only, no images. |
-| Tuuci | 135 | Only 22% have photos. No pricing. | Umbrella/shade vendor — limited display quality. |
+| Metric | Coverage |
+|--------|----------|
+| Has description (>10 chars) | 95% |
+| Has price | 60% |
+| Has image | 98% |
+| Has categories | 78% |
+| In stock | 75% |
+| Has embedding | 100% |
 
 ---
 
-## Scraped But Incomplete — Need Re-Scraping
+## All 58 Vendors — Data Quality
 
-These vendors technically have products in the database, but the data is so sparse or the count is so low that they need to be redone.
+| Vendor | Tier | Count | Desc% | Price% | Image% | Cat% | Stock% | Avg Desc | Issues |
+|--------|------|------:|------:|-------:|-------:|-----:|-------:|---------:|--------|
+| A&B Home | - | 219 | 0% | 0% | 100% | 100% | 0% | 0 | NO-DESC |
+| Ambella Home | top5 | 775 | 94% | 0% | 100% | 100% | 22% | 184 | |
+| Artistica Home | - | 648 | 100% | 0% | 100% | 100% | 77% | 261 | |
+| Bernhardt | top10 | 4,876 | 76% | 94% | 78% | 100% | 42% | 112 | |
+| Bramble Co | - | 1,866 | 92% | 0% | 100% | 100% | 0% | 81 | |
+| Caracole | - | 1,671 | 100% | 100% | 100% | 100% | 90% | 396 | |
+| Chelsea House | - | 1,944 | 0% | 0% | 100% | 100% | 75% | 0 | NO-DESC |
+| Currey & Company | - | 2,725 | 100% | 100% | 100% | 0% | 88% | 368 | |
+| Cyan Design | - | 1,983 | 97% | 100% | 97% | 87% | 100% | 328 | |
+| ELK Home | - | 4,575 | 100% | 100% | 100% | 100% | 100% | 176 | |
+| Eastern Accents | - | 8,338 | 100% | 70% | 94% | 78% | 100% | 153 | |
+| Eloquence | - | 652 | 100% | 100% | 100% | 1% | 99% | 641 | |
+| Essentials for Living | top10 | 408 | 99% | 100% | 0% | 0% | 99% | 35 | NO-IMG, SHORT-DESC |
+| Fairfield Chair | top20 | 5,818 | 100% | 99% | 100% | 99% | 100% | 211 | |
+| Four Hands | - | 17,144 | 100% | 100% | 100% | 100% | 27% | 291 | |
+| Gabriella White | depri | 1,782 | 97% | 80% | 99% | 81% | 100% | 367 | |
+| Gracie Studio | - | 51 | 100% | 100% | 100% | 100% | 96% | 160 | |
+| Greenhouse Fabrics | - | 70 | 100% | 0% | 100% | 0% | 0% | 187 | |
+| HVL Group | - | 5,915 | 100% | 92% | 100% | 100% | 73% | 329 | |
+| Hekman | - | 691 | 100% | 100% | 100% | 100% | 80% | 391 | |
+| Horizon Shades | - | 4 | 100% | 0% | 100% | 0% | 0% | 152 | |
+| Interlude Home | - | 1,183 | 80% | 99% | 100% | 98% | 99% | 127 | |
+| Jaipur Living | - | 2,337 | 100% | 89% | 100% | 100% | 100% | 375 | |
+| James Martin Vanities | - | 411 | 99% | 76% | 100% | 93% | 100% | 679 | |
+| Jamie Young Co | - | 1,100 | 100% | 100% | 100% | 100% | 0% | 310 | |
+| Jonathan Charles | - | 576 | 100% | 99% | 100% | 100% | 71% | 410 | |
+| Lexington Home Brands | top5 | 603 | 100% | 0% | 100% | 93% | 0% | 213 | |
+| Loloi Rugs | - | 4,510 | 100% | 100% | 99% | 100% | 89% | 301 | |
+| Made Goods | - | 1,242 | 100% | 0% | 100% | 100% | 100% | 300 | |
+| Maitland-Smith | - | 705 | 100% | 0% | 100% | 100% | 92% | 190 | |
+| McKinley Leather | - | 117 | 97% | 0% | 0% | 97% | 0% | 58 | NO-IMG |
+| Old Biscayne Designs | - | 3,135 | 100% | 0% | 100% | 98% | 0% | 159 | |
+| Padma's Plantation | - | 331 | 100% | 100% | 100% | 100% | 99% | 2,701 | |
+| Paragon | - | 3,776 | 100% | 0% | 100% | 100% | 100% | 131 | |
+| Phillips Scott | - | 530 | 100% | 0% | 100% | 100% | 0% | 195 | |
+| Precedent Furniture | top5 | 406 | 100% | 0% | 0% | 100% | 0% | 176 | NO-IMG |
+| Propac Images | - | 1,301 | 100% | 0% | 100% | 100% | 100% | 119 | |
+| Regina Andrew | top10 | 1,880 | 78% | 100% | 78% | 0% | 85% | 157 | |
+| Renwil | - | 1,631 | 100% | 100% | 100% | 0% | 100% | 352 | |
+| Rowe Furniture | top20 | 1,923 | 98% | 0% | 98% | 100% | 0% | 228 | |
+| Rowley Company | - | 30 | 67% | 67% | 73% | 0% | 0% | 120 | |
+| Sarreid Ltd | top5 | 603 | 100% | 100% | 100% | 100% | 0% | 364 | |
+| Savoy House | - | 1,790 | 100% | 0% | 100% | 100% | 66% | 439 | |
+| Selamat Designs | - | 277 | 96% | 100% | 96% | 91% | 99% | 353 | |
+| Shadow Catchers Art | - | 2,720 | 100% | 100% | 100% | 99% | 100% | 166 | |
+| Sherrill Furniture | - | 216 | 89% | 0% | 89% | 89% | 0% | 102 | |
+| Southern Home Inc. | - | 1,063 | 99% | 33% | 100% | 100% | 100% | 133 | |
+| Style Upholstering | - | 83 | 99% | 0% | 100% | 87% | 0% | 44 | SHORT-DESC |
+| Summer Classics | - | 417 | 85% | 59% | 87% | 76% | 100% | 289 | |
+| Surya | - | 18,598 | 100% | 0% | 100% | 0% | 100% | 190 | |
+| Swaim Inc. | - | 1,354 | 100% | 9% | 96% | 99% | 96% | 133 | |
+| Theodore Alexander | top5 | 2,507 | 0% | 0% | 100% | 100% | 61% | 0 | NO-DESC |
+| Tuuci | - | 115 | 98% | 0% | 23% | 0% | 0% | 133 | NO-IMG |
+| Universal Furniture | - | 943 | 100% | 0% | 100% | 100% | 0% | 326 | |
+| Uttermost | - | 4,595 | 100% | 0% | 100% | 100% | 100% | 249 | |
+| Wendover Art Group | opt | 9,558 | 100% | 100% | 100% | 100% | 100% | 238 | |
+| Woodbridge Furniture | - | 1,309 | 100% | 100% | 100% | 100% | 100% | 220 | |
+| Worlds Away | - | 886 | 100% | 0% | 100% | 0% | 0% | 234 | |
+| **TOTAL** | | **136,916** | **95%** | **60%** | **98%** | **78%** | **75%** | | |
 
-| Vendor | Products | Problem |
-|--------|----------|---------|
-| Artesia Collections | 480 | Broken — virtually no usable data (0% descriptions, images, or pricing) |
-| Lexington Home Brands | 26 | Major vendor with thousands of products — only captured 26 |
-| Sherrill Furniture | 18 | Major upholstery vendor — only 18 category pages captured, not individual products |
-| McKinley Leather | 10 | Only 10 products captured |
-| Style Upholstering | 11 | Only 11 products captured |
-| Thibaut Design | 4 | Major fabric/wallcovering vendor — only 4 products |
-| Duralee / Robert Allen | 50 | Large fabric house with thousands of products — only 50 captured |
-| Christopher Guy | 63 | Luxury vendor — likely has hundreds more products |
-| Gracie Studio | 50 | Likely has more — needs full catalog scrape |
-| Peyton Webster | 57 | No descriptions or images — needs re-scrape |
-| Rowley Company | 15 | Workroom supplies — likely has more, low priority |
-| Phillips Scott | 1 | Only 1 product captured |
-| Horizon Shades | 3 | Only 3 products captured |
+### Vendor Tier System
+
+- **Top 5 (1.3x boost):** Lexington Home Brands, Theodore Alexander, Sarreid Ltd, Precedent Furniture, Ambella Home
+- **Top 10 (1.2x boost):** Regina Andrew, Bernhardt, Essentials for Living
+- **Top 20 (1.1x boost):** Rowe Furniture, Fairfield Chair
+- **Deprioritized (0.8x):** Gabriella White ("rarely use")
+- **Optional:** Wendover Art Group ("art — OK if can't include")
+
+### Top Data Quality Issues
+
+| Vendor | Count | Tier | Issue |
+|--------|------:|------|-------|
+| Theodore Alexander | 2,507 | Top 5 | 0% descriptions — scraper captured names/images but no description text |
+| Chelsea House | 1,944 | - | 0% descriptions |
+| Essentials for Living | 408 | Top 10 | 0% images, short descriptions (avg 35 chars) |
+| Precedent Furniture | 406 | Top 5 | 0% images |
+| A&B Home | 219 | - | 0% descriptions |
+
+### Note: Duplicate Vendor Entry
+- "Sarreid" (4 products) and "Sarreid Ltd" (599 products) appear as separate vendors. These should be merged.
 
 ---
 
-## Not Scrapeable — Still Blocked
+## Search Quality — Before & After
 
-These vendors still cannot be scraped with automated tools.
+### Test Query: "console table with open base for 2 ottomans"
 
-| Vendor | Reason |
-|--------|--------|
-| Vanguard Furniture | Requires trade account login to access catalog |
-| Global Views | Cloudflare security blocks automated access |
-| Noir Furniture LA | Website requires login to access product catalog |
+**Old MVP results** (vector-only + attribute rerank, OpenAI embeddings):
+- Returned sideboards, trunks, display cabinets, and nightstands
+- Only **5 of 20** results were actually console tables (25% precision)
+- Random Sarreid furniture items matched via broken text search
+- No semantic understanding of "open base" or "space for ottomans"
 
----
+**LuxeScout v2 results** (hybrid search + Cohere Rerank 3.5):
 
-## Progress Since Last Report (Feb 16)
+| # | Score | Product | Vendor | Relevant? |
+|---|------:|---------|--------|-----------|
+| 1 | 0.630 | Adona Console Table | Uttermost | Yes |
+| 2 | 0.518 | Corte Open Console Table w/ 2 Drawers | Bramble Co | Yes |
+| 3 | 0.501 | Camerlin Console Table | Uttermost | Yes |
+| 4 | 0.496 | Reed Console Table | Uttermost | Yes |
+| 5 | 0.374 | Versatilis Console Table | Sarreid Ltd | Yes |
+| 6 | 0.328 | Mar Monte Open Console | Artistica Home | Yes |
+| 7 | 0.259 | Corbet Cocktail Ottoman | Sarreid Ltd | No |
+| 8 | 0.257 | Lacroix Console Table | Cyan Design | Yes |
+| 9 | 0.253 | Corbet Cocktail Ottoman, Caramel | Sarreid Ltd | No |
+| 10 | 0.251 | Bartola Console Table | Rowe Furniture | Yes |
 
-### Newly Scraped Vendors
-
-These 7 vendors were previously marked as "needs scraping" — all have now been completed (except A&B Home which is partially blocked).
-
-| Vendor | Products | Scraper Type | Notes |
-|--------|----------|-------------|-------|
-| HVL Group (Hudson Valley) | 7,459 | Custom API + HTML | 6 brands: Hudson Valley, Troy, Corbett, Mitzi, CSL, Sonneman |
-| Bramble Co | 2,233 | REST API | Open ServiceStack API — rich data with dimensions, materials |
-| Chelsea House | 2,076 | SuperCat platform | Decorative accessories, lighting, artwork, mirrors |
-| Woodbridge Furniture | 1,245 | Magento GraphQL | Traditional furniture and case goods |
-| Southern Home Inc. | 1,184 | WooCommerce Store API | Furniture and decor |
-| Worlds Away | 951 | BigCommerce HTML | Furniture, lighting, mirrors, accessories. Includes dimensions and stock status. |
-| A&B Home | 251 | WooCommerce HTML | Partially complete — site IP-blocked after 251 products. Will retry. |
-
-### By the Numbers
-
-| Metric | Feb 16 Report | Feb 20 Report | Change |
-|--------|---------------|---------------|--------|
-| Total products | 139,405 | **154,804** | **+15,399** |
-| Vendors with products | 58 | **65** | **+7** |
-| Fully scraped vendors | 34 | **43** | **+9** |
-| "Needs scraping" vendors | 7 | **0** | **-7** |
-| Blocked vendors | 3 | **3** | No change |
-| New products added | — | +15,399 | HVL, Bramble, Chelsea, Woodbridge, Southern, Worlds Away, A&B |
-
-### What Was Fixed
-
-| Item | Status |
-|------|--------|
-| HVL Group — was "login-gated" | **Scraped: 7,459 products** |
-| Chelsea House — was "Cloudflare blocked" | **Scraped: 2,076 products** |
-| Bramble Co — was "complex site" | **Scraped: 2,233 products** (open API found!) |
-| Worlds Away — was "Cloudflare blocked" | **Scraped: 951 products** |
-| Southern Home — was "Cloudflare blocked" | **Scraped: 1,184 products** |
-| Woodbridge Furniture — was "DNS error" | **Scraped: 1,245 products** (URL was wrong) |
-| A&B Home — was "password-protected" | **Partially scraped: 251 products** (IP blocked, retry pending) |
-| Magento scraper price bug | **Fixed** — was showing $0 for some products |
-| Magento placeholder images | **Fixed** — placeholder images now filtered out |
-
-### What's Still Stuck
-
-- **A&B Home** — IP-blocked after scraping 251 of ~7,500 products. Scraper reworked with longer delays (2s), session cookies, and retry logic. Will re-run once IP block expires.
-- **Incomplete high-priority vendors** — Lexington (26), Sherrill (18), Thibaut (4), Duralee (50), Christopher Guy (63) still have minimal data
-- **Cloudflare-blocked** — Global Views still returns 403
-- **Login-gated** — Vanguard Furniture and Noir Furniture LA require trade credentials
-- **Dimensions gap** — 14 vendors have dimensions on their sites that we're not capturing
+**Result:** 16 of 20 results are actual console tables (**80% precision**), up from 25% in the old MVP.
 
 ---
 
-## Summary
+## Feedback System
 
-| Status | Vendors | Products |
-|--------|---------|----------|
-| Fully scraped (strong data) | 43 | 107,139 |
-| Scraped (data needs improvement) | 9 | 46,877 |
-| Incomplete (need re-scraping) | 13 | 788 |
-| Blocked / not accessible | 3 | 0 |
-| **Total** | **68** | **154,804** |
+### How It Works
 
-### Key Highlights
+The new feedback system creates a learning loop:
 
-- **69% of products** (107,139) come from vendors with strong, complete data
-- **15,399 new products** added since the Feb 16 report across 7 newly scraped vendors
-- **Top 5 vendors by product count:** Surya (19,761), Four Hands (17,911), Wendover Art Group (10,000), Eastern Accents (9,501), Maxwell Fabrics (7,449)
-- **HVL Group** is now the 6th largest vendor with 7,459 lighting products across 6 brands
-- **Vision enrichment** has been run on 53,347 products using GPT-4o-mini to generate descriptions, colors, materials, and style tags from product images
-- **Cohere Rerank** cross-encoder model improves search result relevance
-- **Vendor diversity** is enforced in search results — max 2 products per vendor to ensure variety
+```
+User searches → Results appear → User clicks thumbs up/down →
+Feedback stored in DB → Score recalculated → Future searches boosted/penalized
+```
 
-### Recommended Next Steps
+#### User Experience
+1. **Hover** over any product card to reveal thumbs up/down buttons
+2. **Thumbs up** = immediately recorded, button highlights gold
+3. **Thumbs down** = opens a comment box asking "Why was this a poor result?" with Skip/Send options
+4. Feedback is **fire-and-forget** — no loading spinner, no interruption
 
-1. **Retry A&B Home scrape** — IP block should expire within 24 hours; will re-run to get all ~7,500 products
-2. **Re-scrape incomplete vendors** — Lexington, Sherrill, Thibaut, Duralee, and Christopher Guy are high-priority vendors with minimal data
-3. **Capture dimensions** — 14 vendors have dimensions available that we're not currently scraping
-4. **Improve Maxwell Fabrics** — 7,449 products but only listing-level data; need to scrape individual detail pages
-5. **Consider headless browser** for Global Views (still Cloudflare-blocked) and Noir Furniture LA
-6. **Trade account access** — Vanguard Furniture requires login credentials to scrape
+#### Scoring
+- Each vote stored in `v2_search_feedback` (product_id, query_text, signal, conversation_id, comment)
+- Score calculated via **Laplace smoothing**: `score = (upvotes - downvotes) / (total_votes + 5)`
+- Stored as precomputed `feedback_score` on `v2_products` (zero latency at search time)
+- Search boost: `boosted_score = base_score * (1.0 + feedback_score * 0.3)` → range 0.85x to 1.2x
 
+---
+
+## Remaining Work
+
+### Data Quality Fixes (Priority Order)
+1. **Theodore Alexander** (Top 5, 2,507 products) — Re-scrape to capture descriptions
+2. **Precedent Furniture** (Top 5, 406 products) — Re-scrape to capture image URLs
+3. **Essentials for Living** (Top 10, 408 products) — Re-scrape to capture images
+4. **Chelsea House** (1,944 products) — Scrape descriptions
+5. **Merge "Sarreid" + "Sarreid Ltd"** — Deduplicate vendor entries
+
+### Search Quality Improvements
+1. **Contextual enrichment** — Run LLM-generated descriptions for all products (especially NO-DESC vendors)
+2. **Re-embed after enrichment** — Products with better descriptions will produce better embeddings
+3. **Query intent extraction** — Have Claude identify primary item type to avoid keyword pollution
